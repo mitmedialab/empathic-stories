@@ -1,0 +1,38 @@
+task: 'summary'
+model: 'BART'
+labels: "MOR"
+use_scheduler: False
+data:
+  train:
+    filename_pairs: '/u/joceshen/socially_connective_dialogue/data/PAIRS (train).csv' # root path of train data (either relative/absolute path is ok)
+    filename_stories: '/u/joceshen/socially_connective_dialogue/data/STORIES (train).csv'
+  val:
+    filename_pairs: '/u/joceshen/socially_connective_dialogue/data/PAIRS (dev).csv' # root path of train data (either relative/absolute path is ok)
+    filename_stories: '/u/joceshen/socially_connective_dialogue/data/STORIES (dev).csv'
+  test:
+    filename_pairs: '/u/joceshen/socially_connective_dialogue/data/PAIRS (test).csv' # root path of train data (either relative/absolute path is ok)
+    filename_stories: '/u/joceshen/socially_connective_dialogue/data/STORIES (test).csv'
+#############################
+train:
+  precision: 16
+  num_workers: 8
+  num_gpus: 1
+  batch_size: 8
+  shuffle: True
+  optimizer: 'adam'
+  seed: 1234
+  adam:
+    lr: 0.00001
+  epochs: 100
+#############################
+val:
+  batch_size: 1
+  shuffle: False
+#############################
+test:
+  batch_size: 1
+  shuffle: False
+#############################
+log:
+  chkpt_dir: 'checkpoint'
+  log_dir: 'lightning_logs'

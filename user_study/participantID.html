@@ -1,0 +1,3058 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+
+<title>Empathic Stories</title>
+
+<body>
+  <div class="container">
+
+
+    <div class="card">
+      <h5 class="card-header bg-primary text-white">Empathic Stories User Study</h5>
+      <div class="card-body">
+        <h5 style="display: inline-block;" class="card-text">Participant ID:</h5>
+        <h5 style="display: inline-block;" id="showParticipantID"></h5>
+        <br>
+        <h5 style="display: inline-block;" class="card-text">Session Number: </h5>
+        <h5 style="display: inline-block;" id="showSessionNum"></h5>
+        <p></p>
+        <p class="justify-content-center" style="margin:auto; color:blue;font-weight:bold;">Please do not reload the
+          current page or hit the back button until you reach the submit button at the end of this session.</p>
+        <p><small>Questions that end with * are required</small></p>
+      </div>
+    </div>
+
+    <div>
+
+      <h5 id="didalready"></h5>
+      <p id="loading" style="display:none">Loading...do not refresh. This can take about 10-30 seconds.</p>
+      <div class="p-3" id="all-content">
+
+        <div id="main-task">
+
+          <!--Start of page 1-->
+          <div id="page1" name="pages">
+            <!--reflection-->
+            <div class="row justify-content-center">
+              <div class="col-11 section" id="reflection-section">
+                <h4 class="mt-4"><label for="story">Part 1: Reflect on your emotions right now</label></h4>
+                <h6 class="mt-4">Valence (how pleasant or unpleasant you are feeling) *</h6>
+                <div class="form-check form-check-inline ml-3 lickert">
+                  <label class="form-check-label" for="val1">Unpleasant &nbsp;</label>
+                  <input class="form-check-input right" type="radio" name="valence" id="val1" value="1"
+                    autocomplete="off" required>
+                </div>
+                <div class="form-check form-check-inline lickert">
+                  <label class="form-check-label" for="val2">&nbsp;</label>
+                  <input class="form-check-input right" type="radio" name="valence" id="val2" value="2"
+                    autocomplete="off" required>
+                </div>
+                <div class="form-check form-check-inline lickert">
+                  <label class="form-check-label" for="val3">&nbsp;</label>
+                  <input class="form-check-input right" type="radio" name="valence" id="val3" value="3"
+                    autocomplete="off" required>
+                </div>
+                <div class="form-check form-check-inline lickert">
+                  <label class="form-check-label" for="val4">&nbsp;</label>
+                  <input class="form-check-input right" type="radio" name="valence" id="val4" value="4"
+                    autocomplete="off" required>
+                </div>
+                <div class="form-check form-check-inline lickert">
+                  <label class="form-check-label" for="val5">&nbsp;</label>
+                  <input class="form-check-input" type="radio" name="valence" id="val5" value="5" autocomplete="off"
+                    required>
+                </div>
+                <div class="form-check form-check-inline lickert">
+                  <label class="form-check-label" for="val6">&nbsp; </label>
+
+                  <input class="form-check-input" type="radio" name="valence" id="val6" value="6" autocomplete="off"
+                    required>
+                </div>
+                <div class="form-check form-check-inline lickert">
+                  <label class="form-check-label" for="val7">&nbsp; </label>
+
+                  <input class="form-check-input" type="radio" name="valence" id="val7" value="7" autocomplete="off"
+                    required>
+                </div>
+                <div class="form-check form-check-inline lickert">
+                  <label class="form-check-label" for="val8">&nbsp; </label>
+
+                  <input class="form-check-input" type="radio" name="valence" id="val8" value="8" autocomplete="off"
+                    required>
+                </div>
+                <div class="form-check form-check-inline lickert">
+                  <label class="form-check-label" for="val9">&nbsp;</label>
+                  <input class="form-check-input" type="radio" name="valence" id="val9" value="9" autocomplete="off"
+                    required>
+                  <label class="form-check-label" for="val9">&nbsp; Extremely happy</label>
+                </div>
+
+                <h6 class="mt-4">Arousal (how strong your feelings are) *</h6>
+                <div class="form-check form-check-inline ml-3 lickert">
+                  <label class="form-check-label" for="arousal1">Sleepy/tired &nbsp;</label>
+                  <input class="form-check-input right" type="radio" name="arousal" id="arousal1" value="1"
+                    autocomplete="off" required>
+                </div>
+                <div class="form-check form-check-inline lickert">
+                  <label class="form-check-label" for="arousal2">&nbsp;</label>
+                  <input class="form-check-input right" type="radio" name="arousal" id="arousal2" value="2"
+                    autocomplete="off" required>
+                </div>
+                <div class="form-check form-check-inline lickert">
+                  <label class="form-check-label" for="arousal3">&nbsp;</label>
+                  <input class="form-check-input right" type="radio" name="arousal" id="arousal3" value="3"
+                    autocomplete="off" required>
+                </div>
+                <div class="form-check form-check-inline lickert">
+                  <label class="form-check-label" for="arousal4">&nbsp;</label>
+                  <input class="form-check-input right" type="radio" name="arousal" id="arousal4" value="4"
+                    autocomplete="off" required>
+                </div>
+                <div class="form-check form-check-inline lickert">
+                  <label class="form-check-label" for="arousal5">&nbsp;</label>
+                  <input class="form-check-input" type="radio" name="arousal" id="arousal5" value="5" autocomplete="off"
+                    required>
+                </div>
+                <div class="form-check form-check-inline lickert">
+                  <label class="form-check-label" for="arousal6">&nbsp; </label>
+
+                  <input class="form-check-input" type="radio" name="arousal" id="arousal6" value="6" autocomplete="off"
+                    required>
+                </div>
+                <div class="form-check form-check-inline lickert">
+                  <label class="form-check-label" for="arousal7">&nbsp; </label>
+
+                  <input class="form-check-input" type="radio" name="arousal" id="arousal7" value="7" autocomplete="off"
+                    required>
+                </div>
+                <div class="form-check form-check-inline lickert">
+                  <label class="form-check-label" for="arousal8">&nbsp; </label>
+
+                  <input class="form-check-input" type="radio" name="arousal" id="arousal8" value="8" autocomplete="off"
+                    required>
+                </div>
+                <div class="form-check form-check-inline lickert">
+                  <label class="form-check-label" for="arousal9">&nbsp;</label>
+                  <input class="form-check-input" type="radio" name="arousal" id="arousal9" value="9" autocomplete="off"
+                    required>
+                  <label class="form-check-label" for="arousal9">&nbsp; Energetic/Aroused</label>
+                </div>
+              </div>
+            </div>
+            <br>
+
+            <!--Prompt-->
+            <div id="promptPlace" class="row justify-content-center">
+
+              <div class="col-11 section" id="storywriting-section1" style="display:none">
+                <h4><label for="summary">Part 2: Write your story</label></h4>
+                <h5 class="text-justify" style="margin-top:.5rem">
+                  1. Look back over your life, and tell us an emotional moment or experience you have had in the past.
+                  <br>You might have encountered challenges or positive memorable events that could be related to:</h5>
+                <ul>
+                  <li>Family</li>
+                  <li>Relationship/Friendship</li>
+                  <li>Mental Health</li>
+                  <li>Physical Health</li>
+                  <li>College/School</li>
+                  <li>Work</li>
+                  <li>Trauma</li>
+                  <li>Life Milestones/Changes</li>
+                  <li>Happiness and Fulfillment</li>
+                  <li>Passion & Youth</li>
+                </ul>
+                <h5 class="text-justify">Whether it's a childhood memory, a turning point in your life, or a vivid adult
+                  experience, please tell a story reflecting on your emotions during the experience, describing how you
+                  felt across different events in the story, and explaining its impact.</h5>
+                <label for="sel1" class="form-label">Choose the most relevant topic that desribes your story:*</label>
+                <select class="form-select" id="topics1" name="topics1" style="width:900px;" autocomplete="off"
+                  required>
+                  <option disabled selected value="">-- please select --</option>
+                  <option value="family">Family</option>
+                  <option value="relationship/friendship">Relationship/Friendship</option>
+                  <option value="mental-health">Mental Health</option>
+                  <option value="physical-health">Physical Health</option>
+                  <option value="college/school">College/School</option>
+                  <option value="work">Work</option>
+                  <option value="trauma">Trauma</option>
+                  <option value="lifeChange">Life Milestones/Changes</option>
+                  <option value="happiness/fulfillment">Happiness and Fulfillment</option>
+                  <option value="passion/youth">Passion & Youth</option>
+
+                </select>
+
+              </div>
+
+              <div class="col-11 section" id="storywriting-section2" style="display:none">
+                <h4><label for="summary">Part 2: Write your story</label></h4>
+                <h5 class="text-justify" style="margin-top:.5rem">
+                  1. Immerse in your emotions and describe a past experience that you may describe as either a high
+                  point
+                  or a low point in your life.
+                  A high point scene could be one that was an especially joyous, exciting, or wonderful moment in you
+                  life.
+                  The latter, however, is an unpleasant or painful experience you had to go through.
+                  <br>You might have encountered challenges or memorable events that could be related to:</h5>
+                <ul>
+                  <li>Happiness and Satisfaction</li>
+                  <li>Motivation</li>
+                  <li>Gratitude</li>
+                  <li>Grief</li>
+                  <li>Loneliness</li>
+                  <li>Depression</li>
+                  <li>Anxiety</li>
+                </ul>
+                </h5>
+
+                <h5 class="text-justify">Thinking back over your entire life, choose a scene, that could be positive or
+                  negative, which has had its impact in residing in your memory and write a story about it.
+                </h5>
+                <label for="sel1" class="form-label">Choose the topic that best desribes your emotions in the
+                  story:*</label>
+                <select class="form-select" id="topics2" name="topics2" style="width:900px;" autocomplete="off"
+                  required>
+                  <option disabled selected value="">-- please select --</option>
+                  <option value="happiness">Happiness and Satisfaction</option>
+                  <option value="motivation">Motivation</option>
+                  <option value="gratitude">Gratitude</option>
+                  <option value="grief">Grief</option>
+                  <option value="Loneliness">Loneliness</option>
+                  <option value="depression">Depression</option>
+                  <option value="anxiety">Anxiety</option>
+
+                </select>
+
+                <br>
+                <small>Please share as vulnerably as you feel comfortably sharing, but do not include any personal
+                  identifiers (i.e. SSN, addresses,...etc).<br>
+                  Your stories will be received <em>anonymously.</em>*</small>
+
+              </div>
+              <div class="col-11 section" id="storywriting-section3" style="display:none">
+                <h4><label for="summary">Part 2: Write your story</label></h4>
+                <h5 class="text-justify" style="margin-top:.5rem">
+                  1. In reviving your memories, you must have identified key moments or milestones in your life that
+                  have
+                  changed you from within.
+                  These life changes may have taught you lessons that you still stand by even if you had to learn them
+                  the
+                  hard way.
+                  <br>You might have encountered challenges or memorable events that could be related to:</h5>
+                <ul>
+                  <li>Motivation & Encouragement</li>
+                  <li>Overcoming and Resilience</li>
+                  <li>Happiness and Fulfillment</li>
+                  <li>Social Support & Gratitude</li>
+                  <li>Hard Work & Success</li>
+
+
+                </ul>
+                </h5>
+                <h5 class="text-justify">Describe a story that may identify a turning point in your life, which may have
+                  changed your mindset and thoughts. In your story, you might reflect on what the moral of the story
+                  was,
+                  and how this life lesson impacted your judgement and self awareness.</h5>
+                <label for="sel1" class="form-label">Choose the topic that best desribes the moral of your
+                  story:*</label>
+                <select class="form-select" id="topics3" name="topics3" style="width:900px;" autocomplete="off"
+                  required>
+                  <option disabled selected value="">-- please select --</option>
+                  <option value="motivation">Motivation & Encouragement</option>
+                  <option value="overcoming">Overcoming and Resilience</option>
+                  <option value="happiness">Happiness and Fulfillment</option>
+                  <option value="support">Social Support & Gratitude</option>
+                  <option value="success">Hard Work & Success</option>
+
+                </select>
+
+              </div>
+
+              <div class="col-11 section">
+                <br>
+                <small>Please share as vulnerably as you feel comfortably sharing, but do not include any personal
+                  identifiers (i.e. SSN, addresses,...etc).<br>
+                  Your stories will be received <em>anonymously.</em>*</small>
+
+                <p class="mt-3">
+                  <small>Response must be <em>at least 5 sentences</em> and <em>500 - 10,000 characters</em> including
+                    spaces. Make sure you use proper punctuation for sentences to be detected.</small>
+                  <br>
+
+                </p>
+                <div class="form-group">
+                  <textarea class="form-control" name="userstory" id="userstory" rows="20" autocomplete="off"
+                    oninput="updateCounter(this,5,500,500,10000);" required></textarea>
+                  <span id="userstory-sentence-counter">0 sentences (0 characters) detected</span>
+
+                </div>
+                <div id="userstory-length-warning" class="col-6 alert alert-danger" style="display: none;">
+                  Response must be <em>at least 5 sentences</em> and <em>500 - 10,000 characters</em> including
+                  spaces.</div>
+
+              </div>
+
+            </div>
+
+            <!--Part 4-->
+            <div class="row justify-content-center">
+              <div id="part4" class="section col-11">
+                <h4><label for="summary">Part 3: Answer questions about the story you wrote</label></h4>
+                <h5 style="margin-top:.5rem">
+                  1. What is the <b style="color: orange">main event</b> being described in your story? *
+                </h5>
+                <p class="mt-3">
+                  <small>Response must be <em>at least 1 sentence</em> and <em>50-1000 characters</em> including
+                    spaces. Make sure you use proper punctuation for sentences to be detected.</small>
+                  <br>
+
+                </p>
+                <div class="row">
+                  <div class="col-8">
+
+                    <div class="form-group">
+                      <textarea class="form-control" name="mainevent" id="mainevent" rows="5"
+                        oninput="updateCounter(this,1,100,50,1000);" autocomplete="off" required></textarea>
+                      <span id="mainevent-sentence-counter">0 sentences (0 characters) detected</span>
+
+                    </div>
+                    <div id="mainevent-length-warning" class="col-6 alert alert-danger" style="display: none;">
+                      Response must be at least 1 sentence, between 50 and 1000 characters (including spaces).
+                    </div>
+                  </div>
+
+                </div>
+
+                <h5 class="mt-4">
+                  2. Describe the <b style="color: purple">emotions</b> you felt <b>before and after</b> the
+                  main
+                  event and <b>why</b>
+                  you feel
+                  this way. *<br>
+
+                </h5>
+                <p class="mt-3">
+                  <small>Response must be <em>at least 2 sentences</em> and <em>150-1000 characters</em> including
+                    spaces. Make sure you use proper punctuation for sentences to be detected.</small>
+                  <br>
+
+                </p>
+                <div class="row">
+                  <div class="col-8">
+
+                    <div class="form-group">
+                      <textarea class="form-control" name="emotion1" id="emotion1" autocomplete="off"
+                        oninput="updateCounter(this,2,100,150,1000);" rows="5" required></textarea>
+                      <span id="emotion1-sentence-counter">0 sentences (0 characters) detected</span>
+
+                    </div>
+                    <div id="emotion1-length-warning" class="col-6 alert alert-danger" style="display: none;">
+                      Response must be at least 2 sentences, between 150 and 1000 characters (including spaces).
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <h5 class="mt-4">
+                  3. What is the <b style="color: green">high-level lesson</b> or takeaway (ie. moral) of your story?
+                  *<br>
+
+                </h5>
+                <p class="mt-3">
+                  <small>Response must be <em>at least 1 sentence</em> and <em>100-1000 characters</em> including
+                    spaces. Make sure you use proper punctuation for sentences to be detected.</small>
+                </p>
+                <div class="row">
+                  <div class="col-8">
+
+                    <div class="form-group">
+                      <textarea class="form-control" name="moral" id="moral" rows="5"
+                        oninput="updateCounter(this,1,100,100,1000);" autocomplete="off" required></textarea>
+                      <span id="moral-sentence-counter">0 sentences (0 characters) detected</span>
+
+                    </div>
+                    <div id="moral-length-warning" class="col-6 alert alert-danger" style="display: none;">
+                      Response must be at least 1 sentence, between 100 and 1000 characters (including spaces).
+                    </div>
+                  </div>
+
+                </div>
+                <h5 class="mt-4">
+                  4. How long ago was this story that you shared? *
+                </h5>
+                <div class='row'>
+                  <div class='input-group col-4'>
+                    <input type="'number" class="form-control" min="0" max="31" id="date" name="date" placeholder='-'
+                      autocomplete="off" required>
+                    <div class="input-group-append">
+                      <select class="form-control dropdown-toggle" id="dateDropDown" name="dateDropDown" required>
+                        <option disabled selected value="">-- please select --</option>
+                        <option value="days">Days</option>
+                        <option value="weeks">Weeks</option>
+                        <option value="months">Months</option>
+                        <option value="years">Years</option>
+                      </select>
+                    </div>
+                  </div>
+                  <br>
+
+                  <div>
+                    <p></p><br>
+                  </div>
+                </div>
+                <!-- demographic info -->
+                <div id="demographic" class="row justify-content-center" style="display:none">
+                  <div class="form-group col-11 section">
+                    <h4><label for="summary">Part 4: Tell us about yourself and this writing task</label></h4>
+
+
+                    <h5 class="mt-4">1. How do you identify?<br><small>Select "prefer not to answer" if needed.</small>
+                    </h5>
+                    <div class="form-group row mt-3">
+                      <label for="gender" class="col-sm-2 col-form-label">Gender identity*</label>
+                      <div class="col-sm-4">
+                        <select id="annotatorGender" name="annotatorGender" class="form-control"
+                          style="font-size: .85rem;" required>
+                          <option disabled selected value="">-- please select --</option>
+                          <option value="man">Man/Male</option>
+                          <option value="woman">Woman/Female</option>
+                          <option value="transman">Trans man</option>
+                          <option value="transwoman">Trans woman</option>
+                          <option value="nonBinary">Non-binary</option>
+                          <option value="other">Other</option>
+                          <option value="na">- prefer not to disclose -</option>
+                        </select>
+                      </div>
+                      <div class="col-sm-4"><small>Please select the gender identity you most identify with
+                          currently.</small>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="annotatorAge" class="col-sm-2 col-form-label">Age (years)*</label>
+                      <div class="col-sm-4">
+                        <input type="number" id="age" name="age" placeholder="-" class="form-control" min="18" max="100"
+                          autocomplete="off" required>
+
+                      </div>
+
+                    </div>
+                    <div class="form-group row">
+                      <label for="race" class="col-sm-2 col-form-label">Race/ethnicity*</label>
+                      <div class="col-sm-4">
+                        <select id="annotatorRace" name="annotatorRace" class="form-control" style="font-size: .85rem;"
+                          required>
+                          <option disabled selected value="">-- please select --</option>
+                          <option value="asian">Asian/Asian American</option>
+                          <option value="indian">South Asian/Indian American</option>
+                          <option value="black">Black/African American</option>
+                          <option value="hisp">Hispanic/Latinx</option>
+                          <option value="white">White/Caucasian</option>
+                          <option value="middleEastern">Middle Eastern</option>
+                          <option value="islander">Native Hawaiian/Pacific Islander</option>
+                          <option value="native">Native American/First Nations</option>
+                          <option value="other">Mixed/other</option>
+                          <option value="na">- prefer not to disclose -</option>
+                        </select>
+                      </div>
+                      <div class="col-sm-4"><small>Please select the racial/ethnic identity you most identify with
+                          currently.</small></div>
+                    </div>
+                    <div class="mb-3">
+                      <h5 class="mt-4">2. To what extent does the following statement describe you:*</h5>
+                      <label for="empathy" class="form-label">
+                        <h5>“I am an empathetic person.” </h5>
+                      </label>
+                      <div class="form-check lickert">
+                        <input class="form-check-input right" type="radio" name="empathylevel" id="notTrueAtAll"
+                          value="1" autocomplete="off" required> <label class="form-check-label"
+                          for="notVeryTrue">&nbsp; Not very
+                          true of me </label>
+                      </div>
+                      <div class="form-check lickert">
+                        <input class="form-check-input right" type="radio" name="empathylevel" id="notTrue" value="2"
+                          autocomplete="off" required>
+                        <label class="form-check-label" for="notTrue">&nbsp; Not true</label>
+
+                      </div>
+                      <div class="form-check lickert">
+                        <input class="form-check-input right" type="radio" name="empathylevel" id="iamneutral" value="3"
+                          autocomplete="off" required>
+                        <label class="form-check-label" for="iamneutral">&nbsp; Neutral</label>
+
+                      </div>
+                      <div class="form-check lickert">
+                        <input class="form-check-input right" type="radio" name="empathylevel" id="true" value="4"
+                          autocomplete="off" required>
+                        <label class="form-check-label" for="true">&nbsp; True</label>
+
+                      </div>
+                      <div class="form-check lickert">
+                        <input class="form-check-input" type="radio" name="empathylevel" id="veryTrue" value="5"
+                          autocomplete="off" required>
+                        <label class="form-check-label" for="veryTrue">&nbsp; Very true of me</label>
+                      </div>
+
+                    </div>
+
+                    <div class="form-group">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="certify-no-pii-story" autocomplete="off"
+                          name="certify-no-pii-story" required>
+                        <label class="form-check-label" for="certify-no-pii-story">
+                          I certify that my responses contain no personally identifiable information (name, address,
+                          SSN,
+                          etc)
+                          about
+                          myself or anyone else. *
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='text-center'>
+                  <button type="button" class="btn btn-lg btn-primary" onclick="submitStory('page2')">Submit
+                    Story</button>
+                </div>
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <!--End of page 1-->
+
+          <div id="rest-task">
+            <div class="row justify-content-center">
+              <div class="col-11 section" id="storyreading-section">
+                <!--Page 2-->
+                <div id="page2" name="pages" style="display:none">
+                  <h5 class="card-header" style="background: #e9ecef;">Your Story:
+                    <a data-toggle="collapse" href="#collapsableStory" role="button" aria-expanded="false"
+                      aria-controls="collapsableStory">[expand/collapse]</a>
+                  </h5>
+                  <p class="displayUserStory card-body collapse show bg-light text-justify" id="collapsableStory"></p>
+                  <p></p>
+                  <h4 class="section"><label for="story">Part 5-A: Read the following stories carefully and answer
+                      questions about
+                      them</label></h4>
+
+                  <h5 class="card-header" style="background: #e9ecef;">Important Instructions
+                    <a data-toggle="collapse" href="#instructionsEmpathy" role="button" aria-expanded="false"
+                      aria-controls="instructionsEmpathy">[expand/collapse]</a>
+                  </h5>
+                  <p id="instructionsEmpathy" class="card-body collapse show bg-light text-justify" style="color:green">
+                    Imagine that you shared
+                    this story you just wrote to a person you trust. Now
+                    imagine that the following story is something they wrote in response. Think about how much you would
+                    empathize with their story.
+                    <br> <br>
+                    <b>Note that empathy refers to being able to resonate with someone else’s experience, without
+                      necessarily having gone through the same experience yourself. It is our ability to put ourselves
+                      in
+                      someone else’s shoes and understand their feelings. Try to empathize with the story even if it’s
+                      not
+                      about the exact same situation or topic</b></p>
+
+
+
+                  <h5 class="card-header" style="background: #e9ecef;">Story 1:
+                  </h5>
+                  <p id="story1_formatted" style="color:blue;" class="card-body show bg-light text-justify"></p>
+                  <!--Survey on story 1-->
+                  <h5 class="card-header" style="background: #e9ecef;">
+                    Survey on story 1
+                  </h5>
+
+                  <div class="card-body collapse show bg-light" id="fullInstructions">
+                    <p class="card-text">
+                      <div class="row">
+                        <div class="col-12">
+
+                          <p style="color:blue;font-weight:bold;">Rate the extent to which you agree with the statements
+                          </p>
+                          <h5 class="mt-4" id="s1q1">
+                            1. I experienced similar emotions as the narrator when reading this story. *
+                          </h5>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-1"
+                              autocomplete="off" id="s1q1_option1" value="1" required> <label class="form-check-label"
+                              for="s1q1_option1">&nbsp; Strongly
+                              disagree </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-1"
+                              autocomplete="off" id="s1q1_option2" value="2" required>
+                            <label class="form-check-label" for="s1q1_option2">&nbsp; Disagree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-1"
+                              autocomplete="off" id="s1q1_option3" value="3" required>
+                            <label class="form-check-label" for="s1q1_option3">&nbsp; Neutral</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-1"
+                              autocomplete="off" id="s1q1_option4" value="4" required>
+                            <label class="form-check-label" for="s1q1_option4">&nbsp; Agree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input survey-radio" type="radio" name="survey1-1"
+                              autocomplete="off" id="s1q1_option5" value="5" required>
+                            <label class="form-check-label" for="s1q1_option5">&nbsp; Strongly agree</label>
+                          </div>
+
+                          <h5 class="mt-4" id="s1q2">2. I can feel the narrator’s emotions in the story. *</h5>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-2"
+                              autocomplete="off" id="s1q2_option1" value="1" required> <label class="form-check-label"
+                              for="s1q2_option1">&nbsp; Strongly
+                              disagree </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-2"
+                              autocomplete="off" id="s1q2_option2" value="2" required>
+                            <label class="form-check-label" for="s1q2_option2">&nbsp; Disagree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-2"
+                              autocomplete="off" id="s1q2_option3" value="3" required>
+                            <label class="form-check-label" for="s1q2_option3">&nbsp; Neutral</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-2"
+                              autocomplete="off" id="s1q2_option4" value="4" required>
+                            <label class="form-check-label" for="s1q2_option4">&nbsp; Agree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input survey-radio" type="radio" name="survey1-2" id="s1q2_option5"
+                              autocomplete="off" value="5" required>
+                            <label class="form-check-label" for="s1q2_option5">&nbsp; Strongly agree</label>
+                          </div>
+
+
+                          <h5 class="mt-4">3. I can recognize the narrator’s situation. *</h5>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-3"
+                              autocomplete="off" id="s1q3_option1" value="1" required> <label class="form-check-label"
+                              for="s1q3_option1">&nbsp; Strongly
+                              disagree </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-3"
+                              autocomplete="off" id="s1q3_option2" value="2" required>
+                            <label class="form-check-label" for="s1q3_option2">&nbsp; Disagree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-3"
+                              autocomplete="off" id="s1q3_option3" value="3" required>
+                            <label class="form-check-label" for="s1q3_option3">&nbsp; Neutral</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-3"
+                              autocomplete="off" id="s1q3_option4" value="4" required>
+                            <label class="form-check-label" for="s1q3_option4">&nbsp; Agree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input survey-radio" type="radio" name="survey1-3" id="s1q3_option5"
+                              autocomplete="off" value="5" required>
+                            <label class="form-check-label" for="s1q3_option5">&nbsp; Strongly agree</label>
+                          </div>
+
+                          <h5 class="mt-4">4. The narrator’s reactions to the situation are understandable. *</h5>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-4"
+                              autocomplete="off" id="s1q4_option1" value="1" required> <label class="form-check-label"
+                              for="s1q4_option1">&nbsp; Strongly
+                              disagree </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-4"
+                              autocomplete="off" id="s1q4_option2" value="2" required>
+                            <label class="form-check-label" for="s1q4_option2">&nbsp; Disagree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-4"
+                              autocomplete="off" id="s1q4_option3" value="3" required>
+                            <label class="form-check-label" for="s1q4_option3">&nbsp; Neutral</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-4"
+                              autocomplete="off" id="s1q4_option4" value="4" required>
+                            <label class="form-check-label" for="s1q4_option4">&nbsp; Agree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input survey-radio" type="radio" name="survey1-4" id="s1q4_option5"
+                              autocomplete="off" value="5" required>
+                            <label class="form-check-label" for="s1q4_option5">&nbsp; Strongly agree</label>
+                          </div>
+
+                          <h5 class="mt-4">5. I can relate to what the narrator was going through. *</h5>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-5"
+                              autocomplete="off" id="s1q5_option1" value="1" required> <label class="form-check-label"
+                              for="s1q5_option1">&nbsp; Strongly
+                              disagree </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-5"
+                              autocomplete="off" id="s1q5_option2" value="2" required>
+                            <label class="form-check-label" for="s1q5_option2">&nbsp; Disagree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-5"
+                              autocomplete="off" id="s1q5_option3" value="3" required>
+                            <label class="form-check-label" for="s1q5_option3">&nbsp; Neutral</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-5"
+                              autocomplete="off" id="s1q5_option4" value="4" required>
+                            <label class="form-check-label" for="s1q5_option4">&nbsp; Agree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input survey-radio" type="radio" name="survey1-5" id="s1q5_option5"
+                              autocomplete="off" value="5" required>
+                            <label class="form-check-label" for="s1q5_option5">&nbsp; Strongly agree</label>
+                          </div>
+
+                          <h5 class="mt-4">6. I can identify with the situation described in the story. *</h5>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-6"
+                              autocomplete="off" id="s1q6_option1" value="1" required> <label class="form-check-label"
+                              for="s1q6_option1">&nbsp; Strongly
+                              disagree </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-6"
+                              autocomplete="off" id="s1q6_option2" value="2" required>
+                            <label class="form-check-label" for="s1q6_option2">&nbsp; Disagree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-6"
+                              autocomplete="off" id="s1q6_option3" value="3" required>
+                            <label class="form-check-label" for="s1q6_option3">&nbsp; Neutral</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-6"
+                              autocomplete="off" id="s1q6_option4" value="4" required>
+                            <label class="form-check-label" for="s1q6_option4">&nbsp; Agree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input survey-radio" type="radio" name="survey1-6" id="s1q6_option5"
+                              autocomplete="off" value="5" required>
+                            <label class="form-check-label" for="s1q6_option5">&nbsp; Strongly agree</label>
+                          </div>
+
+                          <h5 class="mt-4">7. I can identify with the narrator of the story. *</h5>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-7"
+                              autocomplete="off" id="s1q7_option1" value="1" required> <label class="form-check-label"
+                              for="s1q7_option1">&nbsp; Strongly
+                              disagree </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-7"
+                              autocomplete="off" id="s1q7_option2" value="2" required>
+                            <label class="form-check-label" for="s1q7_option2">&nbsp; Disagree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-7"
+                              autocomplete="off" id="s1q7_option3" value="3" required>
+                            <label class="form-check-label" for="s1q7_option3">&nbsp; Neutral</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio" type="radio" name="survey1-7"
+                              autocomplete="off" id="s1q7_option4" value="4" required>
+                            <label class="form-check-label" for="s1q7_option4">&nbsp; Agree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input survey-radio" type="radio" name="survey1-7" id="s1q7_option5"
+                              autocomplete="off" value="5" required>
+                            <label class="form-check-label" for="s1q7_option5">&nbsp; Strongly agree</label>
+                          </div>
+
+
+                          <h5 class="mt-4">8. What made you empathize with this story? Please select all that apply.*
+                          </h5>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey1-10[]"
+                              autocomplete="off" id="s1q10_option1" value="the-narrator-situation"> <label
+                              class="form-check-label" for="s1q10_option1">&nbsp; The
+                              situation the narrator goes through </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey1-10[]"
+                              autocomplete="off" id="s1q10_option2" value="the-narraor-feelings">
+                            <label class="form-check-label" for="s1q10_option2">&nbsp; The feelings the narrator
+                              has</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey1-10[]"
+                              autocomplete="off" id="s1q10_option3" value="takeaway&reflection">
+                            <label class="form-check-label" for="s1q10_option3">&nbsp; The overall takeaway and
+                              reflection
+                              of the story</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey1-10[]"
+                              autocomplete="off" id="s1q10_option5" value="genuine">
+                            <label class="form-check-label" for="s1q10_option5">&nbsp; The story feels genuine</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey1-10[]"
+                              autocomplete="off" id="s1q10_option6" value="consistent">
+                            <label class="form-check-label" for="s1q10_option6">&nbsp; The story is consistent</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey1-10[]"
+                              autocomplete="off" id="s1q10_option7" value="read_Well">
+                            <label class="form-check-label" for="s1q10_option7">&nbsp; The story is read well</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey1-10[]"
+                              autocomplete="off" id="s1q10_option8" value="feels_original">
+                            <label class="form-check-label" for="s1q10_option8">&nbsp; The story feels original</label>
+                          </div>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey1-10[]"
+                              autocomplete="off" id="s1q10_option4" value="other" onchange="getOtherValue1()">
+                            <label class="form-check-label" for="s1q10_option4">&nbsp; Other</label>
+                            <input type="text" style="height:20px; font-size:12px;" id="otherInput-1-10"
+                              autocomplete="off" disabled>
+                            <p id='fillOther1' style="color:red;"></p>
+
+                          </div>
+                          <h5 class="mt-4">9. What made you <em>not</em> empathize with this story? Please select all
+                            that apply.*
+                          </h5>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey1-11[]"
+                              autocomplete="off" id="s1q11_option1" value="the-narrator-situation"> <label
+                              class="form-check-label" for="s1q11_option1">&nbsp; The
+                              situation the narrator goes through </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey1-11[]"
+                              autocomplete="off" id="s1q11_option2" value="the-narraor-feelings">
+                            <label class="form-check-label" for="s1q11_option2">&nbsp; The feelings the narrator
+                              has</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey1-11[]"
+                              autocomplete="off" id="s1q11_option3" value="takeaway&reflection">
+                            <label class="form-check-label" for="s1q11_option3">&nbsp; The overall takeaway and
+                              reflection
+                              of the story</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey1-11[]"
+                              autocomplete="off" id="s1q11_option5" value="not_genuine">
+                            <label class="form-check-label" for="s1q11_option5">&nbsp; The story doesn't feel
+                              genuine</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey1-11[]"
+                              autocomplete="off" id="s1q11_option6" value="not_consistent">
+                            <label class="form-check-label" for="s1q11_option6">&nbsp; The story is not
+                              consistent</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey1-11[]"
+                              autocomplete="off" id="s1q11_option7" value="not_read_Well">
+                            <label class="form-check-label" for="s1q11_option7">&nbsp; The story is not read
+                              well</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey1-11[]"
+                              autocomplete="off" id="s1q11_option8" value="not_original">
+                            <label class="form-check-label" for="s1q11_option8">&nbsp; The story is not original</label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey1-11[]"
+                              autocomplete="off" id="s1q11_option4" value="other" onchange="getOtherValue1()">
+                            <label class="form-check-label" for="s1q11_option4">&nbsp; Other</label>
+                            <input type="text" style="height:20px; font-size:12px;" id="otherInput-1-11"
+                              autocomplete="off" disabled>
+                            <p id='fillOther11' style="color:red;"></p>
+
+                          </div>
+
+                          <div class="form-group lickert">
+                            <h5 class="mt-4">10. Please describe more about why you did or did not empathize well with
+                              the story? *</h5>
+                            <textarea class="form-control" name="describeMore" id="describeMore" autocomplete="off"
+                              rows="3" style="width:600px;"></textarea>
+                          </div>
+
+                          <!--End-->
+                        </div>
+                      </div>
+                    </p>
+                  </div>
+                  <div class='text-center'>
+                    <p></p>
+                    <input type="button" class="btn btn-lg btn-primary" value="Next" onclick="showPage('page3')"
+                      autocomplete="off">
+                  </div>
+                  <!--Survey on story 1 ends here-->
+                </div>
+                <!--End of Page 2-->
+
+                <!--Survey on story 2-->
+
+                <!--Page 3-->
+                <div id="page3" name="pages" style="display:none">
+                  <h5 class="card-header" style="background: #e9ecef;">Your Story:
+                    <a data-toggle="collapse" href="#collapsableStory2" role="button" aria-expanded="false"
+                      aria-controls="collapsableStory2">[expand/collapse]</a>
+                  </h5>
+                  <p class="displayUserStory card-body collapse show bg-light text-justify" id="collapsableStory2"></p>
+
+
+
+                  <h5 class="card-header" style="background: #e9ecef;">Important Instructions
+                    <a data-toggle="collapse" href="#instructionsEmpathy2" role="button" aria-expanded="false"
+                      aria-controls="instructionsEmpathy2">[expand/collapse]</a>
+                  </h5>
+                  <p id="instructionsEmpathy2" class="card-body collapse show bg-light text-justify"
+                    style="color:green">Imagine that you shared
+                    this story you just wrote to a person you trust. Now
+                    imagine that the following story is something they wrote in response. Think about how much you would
+                    empathize with their story.
+                    <br> <br>
+                    <b>Note that empathy refers to being able to resonate with someone else’s experience, without
+                      necessarily having gone through the same experience yourself. It is our ability to put ourselves
+                      in
+                      someone else’s shoes and understand their feelings. Try to empathize with the story even if it’s
+                      not
+                      about the exact same situation or topic</b></p>
+
+                  <h5 class="card-header" style="background: #e9ecef;">Story 2:
+                  </h5>
+                  <p></p>
+                  <p id="story2_formatted" style="color:blue;" class="card-body show bg-light text-justify"></p>
+
+                  <h5 class="card-header" style="background: #e9ecef;">
+                    Survey on story 2
+                  </h5>
+
+                  <div class="card-body collapse show bg-light" id="fullInstructions2">
+                    <p class="card-text">
+                      <div class="row">
+                        <div class="col-12">
+
+                          <p style="color:blue;font-weight:bold;">Rate the extent to which you agree with the statements
+                          </p>
+                          <h5 class="mt-4">
+                            1. I experienced similar emotions as the narrator when reading this story. *
+                          </h5>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-1"
+                              autocomplete="off" id="s2q1_option1" value="1" required> <label class="form-check-label"
+                              for="s2q1_option1">&nbsp; Strongly
+                              disagree </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-1"
+                              autocomplete="off" id="s2q1_option2" value="2" required>
+                            <label class="form-check-label" for="s2q1_option2">&nbsp; Disagree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-1"
+                              autocomplete="off" id="s2q1_option3" value="3" required>
+                            <label class="form-check-label" for="s2q1_option3">&nbsp; Neutral</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-1"
+                              autocomplete="off" id="s2q1_option4" value="4" required>
+                            <label class="form-check-label" for="s2q1_option4">&nbsp; Agree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input survey-radio2" type="radio" name="survey2-1"
+                              id="s2q1_option5" autocomplete="off" value="5" required>
+                            <label class="form-check-label" for="s2q1_option5">&nbsp; Strongly agree</label>
+                          </div>
+
+                          <h5 class="mt-4">2. I can feel the narrator’s emotions in the story. *</h5>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-2"
+                              autocomplete="off" id="s2q2_option1" value="1" required> <label class="form-check-label"
+                              for="s2q2_option1">&nbsp; Strongly
+                              disagree </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-2"
+                              autocomplete="off" id="s2q2_option2" value="2" required>
+                            <label class="form-check-label" for="s2q2_option2">&nbsp; Disagree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-2"
+                              autocomplete="off" id="s2q2_option3" value="3" required>
+                            <label class="form-check-label" for="s2q2_option3">&nbsp; Neutral</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-2"
+                              autocomplete="off" id="s2q2_option4" value="4" required>
+                            <label class="form-check-label" for="s2q2_option4">&nbsp; Agree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input survey-radio2" type="radio" name="survey2-2"
+                              id="s2q2_option5" autocomplete="off" value="5" required>
+                            <label class="form-check-label" for="s2q2_option5">&nbsp; Strongly agree</label>
+                          </div>
+
+                          <h5 class="mt-4">3. I can recognize the narrator’s situation. *</h5>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-3"
+                              autocomplete="off" id="s2q3_option1" value="1" required> <label class="form-check-label"
+                              for="s2q3_option1">&nbsp; Strongly
+                              disagree </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-3"
+                              autocomplete="off" id="s2q3_option2" value="2" required>
+                            <label class="form-check-label" for="s2q3_option2">&nbsp; Disagree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-3"
+                              autocomplete="off" id="s2q3_option3" value="3" required>
+                            <label class="form-check-label" for="s2q3_option3">&nbsp; Neutral</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-3"
+                              autocomplete="off" id="s2q3_option4" value="4" required>
+                            <label class="form-check-label" for="s2q3_option4">&nbsp; Agree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input survey-radio2" type="radio" name="survey2-3"
+                              id="s2q3_option5" autocomplete="off" value="5" required>
+                            <label class="form-check-label" for="s2q3_option5">&nbsp; Strongly agree</label>
+                          </div>
+
+                          <h5 class="mt-4">4. The narrator’s reactions to the situation are understandable. *</h5>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-4"
+                              autocomplete="off" id="s2q4_option1" value="1" required> <label class="form-check-label"
+                              for="s2q4_option1">&nbsp; Strongly
+                              disagree </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-4"
+                              autocomplete="off" id="s2q4_option2" value="2" required>
+                            <label class="form-check-label" for="s2q4_option2">&nbsp; Disagree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-4"
+                              autocomplete="off" id="s2q4_option3" value="3" required>
+                            <label class="form-check-label" for="s2q4_option3">&nbsp; Neutral</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-4"
+                              autocomplete="off" id="s2q4_option4" value="4" required>
+                            <label class="form-check-label" for="s2q4_option4">&nbsp; Agree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input survey-radio2" type="radio" name="survey2-4"
+                              id="s2q4_option5" autocomplete="off" value="5" required>
+                            <label class="form-check-label" for="s2q4_option5">&nbsp; Strongly agree</label>
+                          </div>
+
+                          <h5 class="mt-4">5. I can relate to what the narrator was going through. *</h5>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-5"
+                              autocomplete="off" id="s2q5_option1" value="1" required> <label class="form-check-label"
+                              for="s2q5_option1">&nbsp; Strongly
+                              disagree </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-5"
+                              autocomplete="off" id="s2q5_option2" value="2" required>
+                            <label class="form-check-label" for="s2q5_option2">&nbsp; Disagree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-5"
+                              autocomplete="off" id="s2q5_option3" value="3" required>
+                            <label class="form-check-label" for="s2q5_option3">&nbsp; Neutral</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-5"
+                              autocomplete="off" id="s2q5_option4" value="4" required>
+                            <label class="form-check-label" for="s2q5_option4">&nbsp; Agree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input survey-radio2" type="radio" name="survey2-5"
+                              id="s2q5_option5" autocomplete="off" value="5" required>
+                            <label class="form-check-label" for="s2q5_option5">&nbsp; Strongly agree</label>
+                          </div>
+
+                          <h5 class="mt-4">6. I can identify with the situation described in the story. *</h5>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-6"
+                              autocomplete="off" id="s2q6_option1" value="1" required> <label class="form-check-label"
+                              for="s2q6_option1">&nbsp; Strongly
+                              disagree </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-6"
+                              autocomplete="off" id="s2q6_option2" value="2" required>
+                            <label class="form-check-label" for="s2q6_option2">&nbsp; Disagree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-6"
+                              autocomplete="off" id="s2q6_option3" value="3" required>
+                            <label class="form-check-label" for="s2q6_option3">&nbsp; Neutral</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-6"
+                              autocomplete="off" id="s2q6_option4" value="4" required>
+                            <label class="form-check-label" for="s2q6_option4">&nbsp; Agree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input survey-radio2" type="radio" name="survey2-6"
+                              id="s2q6_option5" value="5" autocomplete="off" required>
+                            <label class="form-check-label" for="s2q6_option5">&nbsp; Strongly agree</label>
+                          </div>
+
+                          <h5 class="mt-4">7. I can identify with the narrator of the story. *</h5>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-7"
+                              autocomplete="off" id="s2q7_option1" value="1" required> <label class="form-check-label"
+                              for="s2q7_option1">&nbsp; Strongly
+                              disagree </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-7"
+                              autocomplete="off" id="s2q7_option2" value="2" required>
+                            <label class="form-check-label" for="s2q7_option2">&nbsp; Disagree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-7"
+                              autocomplete="off" id="s2q7_option3" value="3" required>
+                            <label class="form-check-label" for="s2q7_option3">&nbsp; Neutral</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio2" type="radio" name="survey2-7"
+                              autocomplete="off" id="s2q7_option4" value="4" required>
+                            <label class="form-check-label" for="s2q7_option4">&nbsp; Agree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input survey-radio2" type="radio" name="survey2-7"
+                              id="s2q7_option5" autocomplete="off" value="5" required>
+                            <label class="form-check-label" for="s2q7_option5">&nbsp; Strongly agree</label>
+                          </div>
+
+
+                          <h5 class="mt-4">8. What made you empathize with this story? Please select all that apply.*
+                          </h5>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox2" type="checkbox" name="survey2-10[]"
+                              autocomplete="off" id="s2q10_option1" value="situation"> <label class="form-check-label"
+                              for="s2q10_option1">&nbsp; The
+                              situation the narrator goes through </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox2" type="checkbox" name="survey2-10[]"
+                              autocomplete="off" id="s2q10_option2" value="feelings">
+                            <label class="form-check-label" for="s2q10_option2">&nbsp; The feelings the narrator
+                              has</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox2" type="checkbox" name="survey2-10[]"
+                              autocomplete="off" id="s2q10_option3" value="takeaway&reflection">
+                            <label class="form-check-label" for="s2q10_option3">&nbsp; The overall takeaway and
+                              reflection
+                              of the story</label>
+                          </div>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey2-10[]"
+                              autocomplete="off" id="s2q10_option5" value="genuine">
+                            <label class="form-check-label" for="s2q10_option5">&nbsp; The story feels genuine</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey2-10[]"
+                              autocomplete="off" id="s2q10_option6" value="consistent">
+                            <label class="form-check-label" for="s2q10_option6">&nbsp; The story is consistent</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey2-10[]"
+                              autocomplete="off" id="s2q10_option7" value="read_Well">
+                            <label class="form-check-label" for="s2q10_option7">&nbsp; The story is read well</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey2-10[]"
+                              autocomplete="off" id="s2q10_option8" value="feels_original">
+                            <label class="form-check-label" for="s2q10_option8">&nbsp; The story feels original</label>
+                          </div>
+
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox2" type="checkbox" name="survey2-10[]"
+                              autocomplete="off" id="s2q10_option4" value="other" onchange="getOtherValue2()">
+                            <label class="form-check-label" for="s2q10_option4">&nbsp; Other</label>
+                            <input type="text" style="height:20px; font-size:12px;" id="otherInput-2-10"
+                              autocomplete="off" disabled>
+                            <p id='fillOther2' style="color:red;"></p>
+
+
+                          </div>
+                          <h5 class="mt-4">9. What made you <em>not</em> empathize with this story? Please select all
+                            that apply.*
+                          </h5>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox2" type="checkbox" name="survey2-11[]"
+                              autocomplete="off" id="s2q11_option1" value="situation"> <label class="form-check-label"
+                              for="s2q11_option1">&nbsp; The
+                              situation the narrator goes through </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox2" type="checkbox" name="survey2-11[]"
+                              autocomplete="off" id="s2q11_option2" value="feelings">
+                            <label class="form-check-label" for="s2q11_option2">&nbsp; The feelings the narrator
+                              has</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox2" type="checkbox" name="survey2-11[]"
+                              autocomplete="off" id="s2q11_option3" value="takeaway&reflection">
+                            <label class="form-check-label" for="s2q11_option3">&nbsp; The overall takeaway and
+                              reflection
+                              of the story</label>
+
+                          </div>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey2-11[]"
+                              autocomplete="off" id="s2q11_option5" value="not_genuine">
+                            <label class="form-check-label" for="s2q11_option5">&nbsp; The story doesn't feel
+                              genuine</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey2-11[]"
+                              autocomplete="off" id="s2q11_option6" value="not_consistent">
+                            <label class="form-check-label" for="s2q11_option6">&nbsp; The story is not
+                              consistent</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey2-11[]"
+                              autocomplete="off" id="s2q11_option7" value="not_read_Well">
+                            <label class="form-check-label" for="s2q11_option7">&nbsp; The story is not read
+                              well</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-" type="checkbox" name="survey2-11[]"
+                              autocomplete="off" id="s2q11_option8" value="not_original">
+                            <label class="form-check-label" for="s2q11_option8">&nbsp; The story is not original</label>
+                          </div>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox2" type="checkbox" name="survey2-11[]"
+                              autocomplete="off" id="s2q11_option4" value="other" onchange="getOtherValue2()">
+                            <label class="form-check-label" for="s2q11_option4">&nbsp; Other</label>
+                            <input type="text" style="height:20px; font-size:12px;" id="otherInput-2-11"
+                              autocomplete="off" disabled>
+                            <p id='fillOther22' style="color:red;"></p>
+
+
+                          </div>
+
+                          <div class="form-group lickert">
+                            <h5 class="mt-4">10. Please describe more about why you did or did not empathize well with
+                              the story? *</h5>
+                            <textarea class="form-control" name="describeMore2" id="describeMore2" autocomplete="off"
+                              rows="3" required style="width:600px;"></textarea>
+                          </div>
+
+
+                          <!--End-->
+                        </div>
+                      </div>
+                    </p>
+                  </div>
+                  <div class='text-center'>
+                    <p></p>
+                    <input type="button" class="btn btn-lg btn-primary" value="Next" onclick="showPage('page4')"
+                      autocomplete="off">
+                  </div>
+                  <!--Survey on story 2 ends here-->
+                </div>
+                <!--End of page 3-->
+
+                <!--Survey on story 3-->
+                <!--Page 4-->
+                <div id="page4" name="pages" style="display:none">
+                  <h5 class="card-header" style="background: #e9ecef;">Your Story:
+                    <a data-toggle="collapse" href="#collapsableStory3" role="button" aria-expanded="false"
+                      aria-controls="collapsableStory3">[expand/collapse]</a>
+                  </h5>
+
+                  <p class="displayUserStory card-body collapse show bg-light text-justify" id="collapsableStory3"></p>
+
+
+
+                  <h5 class="card-header" style="background: #e9ecef;">Important Instructions
+                    <a data-toggle="collapse" href="#instructionsEmpathy3" role="button" aria-expanded="false"
+                      aria-controls="instructionsEmpathy3">[expand/collapse]</a>
+                  </h5>
+                  <p id="instructionsEmpathy3" class="card-body collapse show bg-light text-justify"
+                    style="color:green">Imagine that you shared
+                    this story you just wrote to a person you trust. Now
+                    imagine that the following story is something they wrote in response. Think about how much you would
+                    empathize with their story.
+                    <br> <br>
+                    <b>Note that empathy refers to being able to resonate with someone else’s experience, without
+                      necessarily having gone through the same experience yourself. It is our ability to put ourselves
+                      in
+                      someone else’s shoes and understand their feelings. Try to empathize with the story even if it’s
+                      not
+                      about the exact same situation or topic</b></p>
+
+                  <p></p>
+                  <h5 class="card-header" style="background: #e9ecef;">Story 3:
+                  </h5>
+                  <p id="story3_formatted" style="color:blue;" class="card-body show bg-light text-justify"></p>
+                  <h5 class="card-header" style="background: #e9ecef;">
+                    Survey on story 3
+                  </h5>
+
+                  <div class="card-body collapse show bg-light" id="fullInstructions3">
+                    <p class="card-text">
+                      <div class="row">
+                        <div class="col-12">
+
+                          <p style="color:blue;font-weight:bold;">Rate the extent to which you agree with the statements
+                          </p>
+                          <h5 class="mt-4">
+                            1. I experienced similar emotions as the narrator when reading this story. *
+                          </h5>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-1"
+                              autocomplete="off" id="s3q1_option1" value="1" required> <label class="form-check-label"
+                              for="s3q1_option1">&nbsp; Strongly
+                              disagree </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-1"
+                              autocomplete="off" id="s3q1_option2" value="2" required>
+                            <label class="form-check-label" for="s3q1_option2">&nbsp; Disagree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-1"
+                              autocomplete="off" id="s3q1_option3" value="3" required>
+                            <label class="form-check-label" for="s3q1_option3">&nbsp; Neutral</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-1"
+                              autocomplete="off" id="s3q1_option4" value="4" required>
+                            <label class="form-check-label" for="s3q1_option4">&nbsp; Agree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input survey-radio3" type="radio" name="survey3-1"
+                              id="s3q1_option5" autocomplete="off" value="5" required>
+                            <label class="form-check-label" for="s3q1_option5">&nbsp; Strongly agree</label>
+                          </div>
+
+                          <h5 class="mt-4">2. I can feel the narrator’s emotions in the story. *</h5>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-2"
+                              autocomplete="off" id="s3q2_option1" value="1" required> <label class="form-check-label"
+                              for="s3q2_option1">&nbsp; Strongly
+                              disagree </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-2"
+                              autocomplete="off" id="s3q2_option2" value="2" required>
+                            <label class="form-check-label" for="s3q2_option2">&nbsp; Disagree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-2"
+                              autocomplete="off" id="s3q2_option3" value="3" required>
+                            <label class="form-check-label" for="s3q2_option3">&nbsp; Neutral</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-2"
+                              autocomplete="off" id="s3q2_option4" value="4" required>
+                            <label class="form-check-label" for="s3q2_option4">&nbsp; Agree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input survey-radio3" type="radio" name="survey3-2"
+                              id="s3q2_option5" autocomplete="off" value="5" required>
+                            <label class="form-check-label" for="s3q2_option5">&nbsp; Strongly agree</label>
+                          </div>
+
+                          <h5 class="mt-4">3. I can recognize the narrator’s situation. *</h5>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-3"
+                              autocomplete="off" id="s3q3_option1" value="1" required> <label class="form-check-label"
+                              for="s3q3_option1">&nbsp; Strongly
+                              disagree </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-3"
+                              autocomplete="off" id="s3q3_option2" value="2" required>
+                            <label class="form-check-label" for="s3q3_option2">&nbsp; Disagree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-3"
+                              autocomplete="off" id="s3q3_option3" value="3" required>
+                            <label class="form-check-label" for="s3q3_option3">&nbsp; Neutral</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-3"
+                              autocomplete="off" id="s3q3_option4" value="4" required>
+                            <label class="form-check-label" for="s3q3_option4">&nbsp; Agree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input survey-radio3" type="radio" name="survey3-3"
+                              id="s3q3_option5" autocomplete="off" value="5" required>
+                            <label class="form-check-label" for="s3q3_option5">&nbsp; Strongly agree</label>
+                          </div>
+
+                          <h5 class="mt-4">4. The narrator’s reactions to the situation are understandable. *</h5>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-4"
+                              autocomplete="off" id="s3q4_option1" value="1" required> <label class="form-check-label"
+                              for="s3q4_option1">&nbsp; Strongly
+                              disagree </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-4"
+                              autocomplete="off" id="s3q4_option2" value="2" required>
+                            <label class="form-check-label" for="s3q4_option2">&nbsp; Disagree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-4"
+                              autocomplete="off" id="s3q4_option3" value="3" required>
+                            <label class="form-check-label" for="s3q4_option3">&nbsp; Neutral</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-4"
+                              autocomplete="off" id="s3q4_option4" value="4" required>
+                            <label class="form-check-label" for="s3q4_option4">&nbsp; Agree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input survey-radio3" type="radio" name="survey3-4"
+                              id="s3q4_option5" autocomplete="off" value="5" required>
+                            <label class="form-check-label" for="s3q4_option5">&nbsp; Strongly agree</label>
+                          </div>
+
+                          <h5 class="mt-4">5. I can relate to what the narrator was going through. *</h5>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-5"
+                              autocomplete="off" id="s3q5_option1" value="1" required> <label class="form-check-label"
+                              for="s3q5_option1">&nbsp; Strongly
+                              disagree </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-5"
+                              autocomplete="off" id="s3q5_option2" value="2" required>
+                            <label class="form-check-label" for="s3q5_option2">&nbsp; Disagree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-5"
+                              autocomplete="off" id="s3q5_option3" value="3" required>
+                            <label class="form-check-label" for="s3q5_option3">&nbsp; Neutral</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-5"
+                              autocomplete="off" id="s3q5_option4" value="4" required>
+                            <label class="form-check-label" for="s3q5_option4">&nbsp; Agree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input survey-radio3" type="radio" name="survey3-5"
+                              id="s3q5_option5" autocomplete="off" value="5" required>
+                            <label class="form-check-label" for="s3q5_option5">&nbsp; Strongly agree</label>
+                          </div>
+
+                          <h5 class="mt-4">6. I can identify with the situation described in the story. *</h5>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-6"
+                              autocomplete="off" id="s3q6_option1" value="1" required> <label class="form-check-label"
+                              for="s3q6_option1">&nbsp; Strongly
+                              disagree </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-6"
+                              autocomplete="off" id="s3q6_option2" value="2" required>
+                            <label class="form-check-label" for="s3q6_option2">&nbsp; Disagree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-6"
+                              autocomplete="off" id="s3q6_option3" value="3" required>
+                            <label class="form-check-label" for="s3q6_option3">&nbsp; Neutral</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-6"
+                              autocomplete="off" id="s3q6_option4" value="4" required>
+                            <label class="form-check-label" for="s3q6_option4">&nbsp; Agree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input survey-radio3" type="radio" name="survey3-6"
+                              id="s3q6_option5" autocomplete="off" value="5" required>
+                            <label class="form-check-label" for="s3q6_option5">&nbsp; Strongly agree</label>
+                          </div>
+
+                          <h5 class="mt-4">7. I can identify with the narrator of the story. *</h5>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-7"
+                              autocomplete="off" id="s3q7_option1" value="1" required> <label class="form-check-label"
+                              for="s3q7_option1">&nbsp; Strongly
+                              disagree </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-7"
+                              autocomplete="off" id="s3q7_option2" value="2" required>
+                            <label class="form-check-label" for="s3q7_option2">&nbsp; Disagree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-7"
+                              autocomplete="off" id="s3q7_option3" value="3" required>
+                            <label class="form-check-label" for="s3q7_option3">&nbsp; Neutral</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-radio3" type="radio" name="survey3-7"
+                              autocomplete="off" id="s3q7_option4" value="4" required>
+                            <label class="form-check-label" for="s3q7_option4">&nbsp; Agree</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input survey-radio3" type="radio" name="survey3-7"
+                              id="s3q7_option5" autocomplete="off" value="5" required>
+                            <label class="form-check-label" for="s3q7_option5">&nbsp; Strongly agree</label>
+                          </div>
+
+                          <h5 class="mt-4">8. What made you empathize with this story? Please select all that apply.*
+                          </h5>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox3" type="checkbox" name="survey3-10[]"
+                              autocomplete="off" id="s3q10_option1" value="situation"> <label class="form-check-label"
+                              for="s3q10_option1">&nbsp; The
+                              situation the narrator goes through </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox3" type="checkbox" name="survey3-10[]"
+                              autocomplete="off" id="s3q10_option2" value="feelings">
+                            <label class="form-check-label" for="s3q10_option2">&nbsp; The feelings the narrator
+                              has</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox3" type="checkbox" name="survey3-10[]"
+                              autocomplete="off" id="s3q10_option3" value="takeaway&reflection">
+                            <label class="form-check-label" for="s3q10_option3">&nbsp; The overall takeaway and
+                              reflection
+                              of the story</label>
+
+                          </div>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey3-10[]"
+                              autocomplete="off" id="s3q10_option5" value="genuine">
+                            <label class="form-check-label" for="s3q10_option5">&nbsp; The story feels genuine</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey3-10[]"
+                              autocomplete="off" id="s3q10_option6" value="consistent">
+                            <label class="form-check-label" for="s3q10_option6">&nbsp; The story is consistent</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey3-10[]"
+                              autocomplete="off" id="s3q10_option7" value="read_Well">
+                            <label class="form-check-label" for="s3q10_option7">&nbsp; The story is read well</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey3-10[]"
+                              autocomplete="off" id="s3q10_option8" value="feels_original">
+                            <label class="form-check-label" for="s3q10_option8">&nbsp; The story feels original</label>
+                          </div>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox3" type="checkbox" name="survey3-10[]"
+                              autocomplete="off" id="s3q10_option4" value="other" onchange="getOtherValue3()">
+                            <label class="form-check-label" for="s3q10_option4">&nbsp; Other</label>
+                            <input type="text" style="height:20px; font-size:12px;" id="otherInput-3-10" disabled
+                              autocomplete="off">
+                            <p id='fillOther3' style="color:red;"></p>
+
+
+                          </div>
+                          <h5 class="mt-4">9. What made you <em>not</em> empathize with this story? Please select all
+                            that apply.*
+                          </h5>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox3" type="checkbox" name="survey3-11[]"
+                              autocomplete="off" id="s3q11_option1" value="situation"> <label class="form-check-label"
+                              for="s3q11_option1">&nbsp; The
+                              situation the narrator goes through </label>
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox3" type="checkbox" name="survey3-11[]"
+                              autocomplete="off" id="s3q11_option2" value="feelings">
+                            <label class="form-check-label" for="s3q11_option2">&nbsp; The feelings the narrator
+                              has</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox3" type="checkbox" name="survey3-11[]"
+                              autocomplete="off" id="s3q11_option3" value="takeaway&reflection">
+                            <label class="form-check-label" for="s3q11_option3">&nbsp; The overall takeaway and
+                              reflection
+                              of the story</label>
+
+                          </div>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey3-11[]"
+                              autocomplete="off" id="s3q11_option5" value="not_genuine">
+                            <label class="form-check-label" for="s3q11_option5">&nbsp; The story doesn't feel
+                              genuine</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey3-11[]"
+                              autocomplete="off" id="s3q11_option6" value="not_consistent">
+                            <label class="form-check-label" for="s3q11_option6">&nbsp; The story is not
+                              consistent</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey3-11[]"
+                              autocomplete="off" id="s3q11_option7" value="not_read_Well">
+                            <label class="form-check-label" for="s3q11_option7">&nbsp; The story is not read
+                              well</label>
+
+                          </div>
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox" type="checkbox" name="survey3-11[]"
+                              autocomplete="off" id="s3q11_option8" value="not_original">
+                            <label class="form-check-label" for="s3q11_option8">&nbsp; The story is not original</label>
+                          </div>
+
+                          <div class="form-check lickert">
+                            <input class="form-check-input right survey-checkbox3" type="checkbox" name="survey3-11[]"
+                              autocomplete="off" id="s3q11_option4" value="other" onchange="getOtherValue3()">
+                            <label class="form-check-label" for="s3q11_option4">&nbsp; Other</label>
+                            <input type="text" style="height:20px; font-size:12px;" id="otherInput-3-11"
+                              autocomplete="off" disabled>
+                            <p id='fillOther33' style="color:red;"></p>
+
+
+                          </div>
+
+                          <div class="form-group lickert">
+                            <h5 class="mt-4">10. Please describe more about why you did or did not empathize well with
+                              the story? *</h5>
+                            <textarea class="form-control" name="describeMore3" id="describeMore3" autocomplete="off"
+                              rows="3" required style="width:600px;"></textarea>
+                          </div>
+
+
+                        </div>
+
+                        <!--End-->
+                      </div>
+                  </div>
+                  </p>
+
+                  <div class='text-center'>
+                    <p></p>
+                    <input type="button" class="btn btn-lg btn-primary" value="Next" onclick="showPage('page6')"
+                      autocomplete="off">
+                  </div>
+                  <!--Survey on story 3 ends here-->
+                </div>
+              </div>
+              <!--End of page 5-->
+
+              <!--Part 5-B-->
+              <div>
+                <p></p>
+              </div>
+              <!--page 6-->
+              <div id="page6" name="pages" style="display:none">
+                <div class=" col-11">
+                  <h5 class="card-header" style="background: #e9ecef;">Your Story:
+                    <a data-toggle="collapse" href="#collapsableStory4" role="button" aria-expanded="false"
+                      aria-controls="collapsableStory4">[expand/collapse]</a>
+                  </h5>
+                  <p class="displayUserStory card-body collapse show bg-light text-justify" id="collapsableStory4"></p>
+                  <h5 class="section">Part 5-B: Compare the stories that you have read</h5>
+                  <h5>
+                    1. Drag and drop the items below to rank the stories in the order that you empathized with
+                    most to least: *
+                  </h5>
+                  <p>Here are the stories that you have been presented with in this session:</p>
+
+                  <ol id="storiesReturned">
+                    <li id="randomStory1" class="text-justify"></li>
+                    <li id="randomStory2" class="text-justify"></li>
+                    <li id="randomStory3" class="text-justify"></li>
+                  </ol>
+                  <div class="card-body collapse show bg-light" id="fullInstructions4">
+                    <p class="card-text">
+                      <div class="row">
+                        <div class="col-12">
+
+                          <ul id="sortable">
+                            <li id="item1" draggable="true">First story</li>
+                            <li id="item2" draggable="true">Second story</li>
+                            <li id="item3" draggable="true">Third story</li>
+                          </ul>
+
+                        </div>
+                      </div>
+                    </p>
+                  </div>
+                  <!--new question only in session 3-->
+                  <div id="part6Div" style="display:none;">
+                    <h5 class="mt-4">Part 6: if the stories you read were written by an AI, would you empathize: *</h5>
+
+                    <div class="form-check lickert">
+                      <input class="form-check-input right survey-radio" type="radio" name="part6" autocomplete="off"
+                        id="part6_option1" value="1" required> <label class="form-check-label" for="s1q8_option1">&nbsp;
+                        A lot less
+                      </label>
+                    </div>
+                    <div class="form-check lickert">
+                      <input class="form-check-input right survey-radio" type="radio" name="part6" autocomplete="off"
+                        id="part6_option2" value="2" required>
+                      <label class="form-check-label" for="s1q8_option2">&nbsp; A little less</label>
+
+                    </div>
+                    <div class="form-check lickert">
+                      <input class="form-check-input right survey-radio" type="radio" name="part6" autocomplete="off"
+                        id="part6_option3" value="3" required>
+                      <label class="form-check-label" for="s1q8_option3">&nbsp; The same</label>
+
+                    </div>
+                    <div class="form-check lickert">
+                      <input class="form-check-input right survey-radio" type="radio" name="part6" autocomplete="off"
+                        id="part6_option4" value="4" required>
+                      <label class="form-check-label" for="s1q8_option4">&nbsp; A little more</label>
+
+                    </div>
+                    <div class="form-check lickert">
+                      <input class="form-check-input survey-radio" type="radio" name="part6" id="part6_option5"
+                        autocomplete="off" value="5" required>
+                      <label class="form-check-label" for="s1q8_option5">&nbsp; A lot more</label>
+                    </div>
+                    <p id="fillEmpathyWithAI" style="color:red;"></p>
+                  </div>
+                  <!--new question only in session 3-->
+                </div>
+
+                <div class="row justify-content-center mb-4">
+                  <div class="col-11 section"></div>
+                  <div class="col-8 text-center" style="font-size: 10pt;">
+                    <p>
+                      Optional Feedback:
+                    </p>
+                    <textarea id="commentbox" name="commentbox" class="form-control" style="width: 100%;"
+                      autocomplete="off"></textarea><br>
+                    <input type="submit" id="submitButton" class="btn btn-primary" value="Submit Hit!"
+                      autocomplete="off">
+                  </div>
+
+                </div>
+              </div>
+              <!--end of page 6-->
+            </div>
+          </div>
+          <div class="col-6 mt-2 alert alert-danger" id="cantSubmit" style="display: none;">
+            You're missing some questions! Please verify that you've filled out all the questions with the
+            appropriate
+            lengths.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function () {
+      $('body').bind('cut copy paste', function (event) {
+        event.preventDefault();
+      });
+    });
+    var PILOT_STUDY = false;
+    var flag = false;
+    var id = parent.document.URL.substring(parent.document.URL.indexOf('?'), parent.document.URL.length).substring(4);
+    var e;
+    var condition;
+    var ipAddress = "";
+    var numOfStories = 0;
+
+    // draggables
+    var sortedList = [];
+    var dragSrcEl = null;
+    if (PILOT_STUDY) {
+      var sessionNumber = 3;
+    } else {
+      var sessionNumber = 0;
+    }
+
+    var xmlHttp = new XMLHttpRequest();
+    var url = 'https://matlaberp8.media.mit.edu:5192/participantIDInput/';
+    var request = new XMLHttpRequest();
+    request.open('POST', url, false);
+    request.setRequestHeader("Content-Type", "application/json");
+    console.log("i am before send")
+    request.send(JSON.stringify({
+      participantIDInput: id
+    }));
+    if (request.status != 200) {
+      window.location.href = "stop.html?id=" + id;
+    }
+
+    //function to split the form into pages
+    function submitStory(pageId) {
+      //main event
+      var mainEvent = document.getElementById("mainevent").value;
+      //narrator emotions
+      var narratorEmotions = document.getElementById("emotion1").value;
+      //high level lesson (moral)
+      var moral = document.getElementById("moral").value;
+      //story date
+      var fullDate = ''
+      var storyDate = document.getElementById("date").value;
+      var dateDropDown = document.getElementById("dateDropDown").value;
+      fullDate = storyDate + ' ' + dateDropDown;
+
+
+      //get Valence value
+      var valence = 0;
+      var valenceValues = document.getElementsByName('valence');
+      for (i = 0; i < valenceValues.length; i++) {
+        if (valenceValues[i].checked)
+          valence = valenceValues[i].value;
+      }
+      //get Arousal value
+      var arousal = 0;
+      var arousalValues = document.getElementsByName('arousal');
+      for (i = 0; i < arousalValues.length; i++) {
+        if (arousalValues[i].checked)
+          arousal = arousalValues[i].value;
+      }
+      //get story topic
+      var mystoryTopic = document.getElementById("topics" + sessionNumber).value;
+
+      //get user story
+      var mystory = document.getElementById("userstory").value;
+
+      if ((sessionNumber == 3 && PILOT_STUDY) || sessionNumber == 1) {
+        var gender = document.getElementById("annotatorGender").value;
+        var age = document.getElementById("age").value;
+        var race = document.getElementById("annotatorRace").value;
+        var empathyLevel;
+        const empathyOptions = document.getElementsByName(`empathylevel`);
+        for (const option of empathyOptions) {
+          if (option.checked) {
+            empathyLevel = option.value;
+            break;
+          }
+        }
+        var certify = document.getElementById("certify-no-pii-story").checked;
+      }
+
+
+      var ok = checkUserStory();
+      console.log("story", ok)
+      ok = checkEmotion1() && ok;
+      console.log("emotion", ok)
+
+      ok = checkSummary() && ok;
+      console.log("summary", ok)
+
+      ok = checkMoral() && ok;
+      console.log("moral", ok)
+
+      if ((sessionNumber == 3 && PILOT_STUDY) || sessionNumber == 1) {
+        if (valence && arousal && storyDate && dateDropDown && mystoryTopic && gender && age && race &&
+          empathyLevel &&
+          certify) {
+          ok = ok && true;
+        } else {
+          ok = ok && false;
+        }
+      } else {
+        if (valence && arousal && storyDate && dateDropDown && mystoryTopic) {
+          ok = ok && true;
+        } else {
+          ok = ok && false;
+        }
+      }
+
+      console.log("All fields valid? " + ok);
+      $(":valid").removeClass("invalid");
+      $(".lickert>input:valid").parents().removeClass("invalid");
+      $(".form-check>input:valid").parents().removeClass("invalid");
+      if (!ok) {
+        $("#cantSubmit").show();
+        $(":invalid").addClass("invalid");
+        $(".lickert>input:invalid").parents().addClass("invalid");
+        $(".form-check>input:invalid").parents().addClass("invalid");
+      } else {
+        document.getElementById("all-content").style.display = "none";
+        document.getElementById("loading").style.display = "block";
+        var xmlHttp = new XMLHttpRequest();
+        var url = 'https://matlaberp8.media.mit.edu:5192/submitMyStory/';
+        var request = new XMLHttpRequest();
+
+        request.open('POST', url, true);
+        request.setRequestHeader("Content-Type", "application/json");
+        request.onreadystatechange = function () {
+          if (request.status == 200 && request.readyState == 4) {
+            $("#cantSubmit").hide();
+            $(":invalid").removeClass("invalid");
+            $(".lickert>input:invalid").parents().removeClass("invalid");
+            $(".form-check>input:invalid").parents().removeClass("invalid");
+            var response = JSON.parse(request.response);
+            sessionNumber = response.showSessionNum;
+            if (sessionNumber > 3) {
+              window.location.replace("stop.html?id=" + id);
+            } else {
+              numOfStories = response.numOfStories;
+              const displayUserStories = document.querySelectorAll(".displayUserStory");
+              displayUserStories.forEach((paragraph) => {
+                paragraph.textContent = response.mystory;
+              });
+              if (numOfStories == 3) {
+                document.getElementById("story1_formatted").innerHTML = response.story1;
+                document.getElementById("story2_formatted").innerHTML = response.story2;
+                document.getElementById("story3_formatted").innerHTML = response.story3;
+                document.getElementById("randomStory1").innerHTML = response.story1;
+                document.getElementById("randomStory2").innerHTML = response.story2;
+                document.getElementById("randomStory3").innerHTML = response.story3;
+              } else if (numOfStories == 2) {
+                document.getElementById("story1_formatted").innerHTML = response.story1;
+                document.getElementById("story2_formatted").innerHTML = response.story2;
+                document.getElementById("randomStory1").innerHTML = response.story1;
+                document.getElementById("randomStory2").innerHTML = response.story2;
+                document.getElementById("randomStory3").style.display = 'none';
+                document.getElementById("item3").style.display = 'none';
+
+              } else if (numOfStories == 1) {
+                document.getElementById("story1_formatted").innerHTML = response.story1;
+                document.getElementById("randomStory1").innerHTML = response.story1;
+                document.getElementById("randomStory2").style.display = 'none';
+                document.getElementById("item2").style.display = 'none';
+                document.getElementById("randomStory3").style.display = 'none';
+                document.getElementById("item3").style.display = 'none';
+              }
+
+            }
+            // Hide all pages
+            var pages = document.getElementsByName("pages");
+            for (var i = 0; i < pages.length; i++) {
+              pages[i].style.display = "none";
+            }
+            // Show the requested page
+            document.getElementById("all-content").style.display = "block";
+            document.getElementById("loading").style.display = "none";
+            document.getElementById(pageId).style.display = "block";
+
+          }
+        }
+        if ((sessionNumber == 3 && PILOT_STUDY) || sessionNumber == 1) {
+          request.send(JSON.stringify({
+            participantIDInput: id,
+            mainEvent: mainEvent,
+            narratorEmotions: narratorEmotions,
+            moral: moral,
+            fullDate: fullDate,
+            valence: valence,
+            arousal: arousal,
+            mystoryTopic: mystoryTopic,
+            mystory: mystory,
+            gender: gender,
+            age: age,
+            race: race,
+            empathyLevel: empathyLevel,
+          }));
+        } else {
+          request.send(JSON.stringify({
+            participantIDInput: id,
+            mainEvent: mainEvent,
+            narratorEmotions: narratorEmotions,
+            moral: moral,
+            fullDate: fullDate,
+            valence: valence,
+            arousal: arousal,
+            mystoryTopic: mystoryTopic,
+            mystory: mystory,
+          }));
+        }
+
+      }
+    }
+
+    function checkSurvey(pageId) {
+
+      if (numOfStories == 3) {
+        if (pageId == 'page3') {
+          var survey1Good = checkSurvey1();
+          return survey1Good;
+        } else if (pageId == 'page4') {
+          var survey2Good = checkSurvey2();
+          return survey2Good;
+        } else if (pageId == 'page6') {
+          var survey3Good = checkSurvey3();
+          return survey3Good;
+        }
+
+      } else if (numOfStories == 2) {
+        if (pageId == 'page3') {
+          var survey1Good = checkSurvey1();
+          return survey1Good;
+        } else if (pageId == 'page4') {
+          var survey2Good = checkSurvey2();
+          return survey2Good;
+        }
+      } else if (numOfStories == 1) {
+        var survey1Good = checkSurvey1();
+        return survey1Good;
+      }
+
+    }
+
+    function checkSurvey1() {
+      var radioButtons = '';
+      var checkboxes = '';
+      var survey1IsRadioAnswered = false;
+
+      var survey1isCheckboxAnswered10 = false;
+      var survey1isCheckboxAnswered11 = false;
+
+      var iam1Other10 = false;
+      var iam1Other11 = false;
+
+      var atLeastOne111 = false;
+      var atLeastOne110 = false;
+
+      var survey1textBoxAnswered = false;
+
+      //suvey 1 radio questions 1 till 7
+      for (var i = 1; i <= 7; i++) {
+        var survey1RadioSet = document.getElementsByName(`survey1-${i}`);
+        let checkedOption1;
+        for (checkedOption1 of survey1RadioSet) {
+          if (checkedOption1.checked) {
+            if (i == 7) {
+              survey1IsRadioAnswered = true;
+            }
+            break;
+          }
+        }
+      }
+      //survey 1 checkbox question 8
+      var survey1checkbox10 = document.getElementsByName(`survey1-10[]`);
+      let checkedOption10;
+      for (checkedOption10 of survey1checkbox10) {
+        if (checkedOption10.checked) {
+          console.log(checkedOption10.value);
+          if (checkedOption10.value == '') {
+            document.getElementById('fillOther1').innerHTML =
+              "You have checked the other option. Please fill it before submitting."
+            iam1Other10 = true;
+            console.log('oops');
+          } else {
+            atLeastOne110 = true;
+          }
+        }
+      }
+      if (atLeastOne110 && !iam1Other10) {
+        console.log('good');
+        survey1isCheckboxAnswered10 = true;
+      } else {
+        console.log('bad');
+        survey1isCheckboxAnswered10 = false;
+      }
+      //survey 1 checkbox question 9
+      var survey1checkbox11 = document.getElementsByName(`survey1-11[]`);
+      let checkedOption11;
+      for (checkedOption11 of survey1checkbox11) {
+        if (checkedOption11.checked) {
+          if (checkedOption11.value == '') {
+            document.getElementById('fillOther11').innerHTML =
+              "You have checked the other option. Please fill it before submitting."
+            iam1Other11 = true;
+          } else {
+            atLeastOne111 = true;
+          }
+        }
+      }
+
+      if (atLeastOne111 && !iam1Other11) {
+        survey1isCheckboxAnswered11 = true;
+      } else {
+        survey1isCheckboxAnswered11 = false;
+      }
+
+      //survey 1 question 10 textarea
+      var textareaBox = document.getElementById("describeMore").value;
+      if (textareaBox == "") {
+        survey1textBoxAnswered = false;
+        $("#describeMore").attr("data-state", "invalid");
+      } else {
+        survey1textBoxAnswered = true;
+        $("#describeMore").attr("data-state", "open");
+      }
+
+      //////////////////////////////////////////////
+      if (survey1IsRadioAnswered && survey1isCheckboxAnswered10 && survey1isCheckboxAnswered11 &&
+        survey1textBoxAnswered) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    function checkSurvey2() {
+      var radioButtons = '';
+      var checkboxes = '';
+      var survey2IsRadioAnswered = false;
+
+      var survey2isCheckboxAnswered10 = false;
+      var survey2isCheckboxAnswered11 = false;
+
+      var iam2Other10 = false;
+      var iam2Other11 = false;
+
+      var atLeastOne211 = false;
+      var atLeastOne210 = false;
+
+      var survey2textBoxAnswered = false;
+
+      //suvey 2 radio questions 1 till 7
+      for (var i = 1; i <= 7; i++) {
+        var survey2RadioSet = document.getElementsByName(`survey2-${i}`);
+        let checkedOption2;
+        for (checkedOption2 of survey2RadioSet) {
+          if (checkedOption2.checked) {
+            if (i == 7) {
+              survey2IsRadioAnswered = true;
+            }
+            break;
+          }
+        }
+      }
+      //survey 2 checkbox question 8
+      var survey2checkbox10 = document.getElementsByName(`survey2-10[]`);
+      let checkedOption210;
+      for (checkedOption210 of survey2checkbox10) {
+        if (checkedOption210.checked) {
+          console.log(checkedOption210.value);
+          if (checkedOption210.value == '') {
+            document.getElementById('fillOther2').innerHTML =
+              "You have checked the other option. Please fill it before submitting."
+            iam2Other10 = true;
+            console.log('oops');
+          } else {
+            atLeastOne210 = true;
+          }
+        }
+      }
+      if (atLeastOne210 && !iam2Other10) {
+        console.log('good');
+        survey2isCheckboxAnswered10 = true;
+      } else {
+        console.log('bad');
+        survey2isCheckboxAnswered10 = false;
+      }
+      //survey 2 checkbox question 9
+      var survey2checkbox11 = document.getElementsByName(`survey2-11[]`);
+      let checkedOption211;
+      for (checkedOption211 of survey2checkbox11) {
+        if (checkedOption211.checked) {
+          if (checkedOption211.value == '') {
+            document.getElementById('fillOther22').innerHTML =
+              "You have checked the other option. Please fill it before submitting."
+            iam2Other11 = true;
+          } else {
+            atLeastOne211 = true;
+          }
+        }
+      }
+
+      if (atLeastOne211 && !iam2Other11) {
+        survey2isCheckboxAnswered11 = true;
+      } else {
+        survey2isCheckboxAnswered11 = false;
+      }
+
+      //survey 2 question 10
+      var textareaBox2 = document.getElementById("describeMore2").value;
+      if (textareaBox2 == "") {
+        survey2textBoxAnswered = false;
+        $("#describeMore2").attr("data-state", "invalid");
+      } else {
+        survey2textBoxAnswered = true;
+        $("#describeMore2").attr("data-state", "open");
+      }
+
+      //////////////////////////////////////////////
+      if (survey2IsRadioAnswered && survey2isCheckboxAnswered10 && survey2isCheckboxAnswered11 &&
+        survey2textBoxAnswered) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    function checkSurvey3() {
+      var radioButtons = '';
+      var checkboxes = '';
+      var survey3IsRadioAnswered = false;
+
+      var survey3isCheckboxAnswered10 = false;
+      var survey3isCheckboxAnswered11 = false;
+
+      var iam3Other10 = false;
+      var iam3Other11 = false;
+
+      var atLeastOne311 = false;
+      var atLeastOne310 = false;
+
+      var survey3textBoxAnswered = false;
+
+      //suvey 3 radio questions 1 till 7
+      for (var i = 1; i <= 7; i++) {
+        var survey3RadioSet = document.getElementsByName(`survey3-${i}`);
+        let checkedOption3;
+        for (checkedOption3 of survey3RadioSet) {
+          if (checkedOption3.checked) {
+            if (i == 7) {
+              survey3IsRadioAnswered = true;
+            }
+            break;
+          }
+        }
+      }
+      //survey 3 checkbox question 8
+      var survey3checkbox10 = document.getElementsByName(`survey3-10[]`);
+      let checkedOption310;
+      for (checkedOption310 of survey3checkbox10) {
+        if (checkedOption310.checked) {
+          console.log(checkedOption310.value);
+          if (checkedOption310.value == '') {
+            document.getElementById('fillOther3').innerHTML =
+              "You have checked the other option. Please fill it before submitting."
+            iam3Other10 = true;
+            console.log('oops');
+          } else {
+            atLeastOne310 = true;
+          }
+        }
+      }
+      if (atLeastOne310 && !iam3Other10) {
+        console.log('good');
+        survey3isCheckboxAnswered10 = true;
+      } else {
+        console.log('bad');
+        survey3isCheckboxAnswered10 = false;
+      }
+      //survey 3 checkbox question 9
+      var survey3checkbox11 = document.getElementsByName(`survey3-11[]`);
+      let checkedOption311;
+      for (checkedOption311 of survey3checkbox11) {
+        if (checkedOption311.checked) {
+          if (checkedOption311.value == '') {
+            document.getElementById('fillOther33').innerHTML =
+              "You have checked the other option. Please fill it before submitting."
+            iam3Other11 = true;
+            // break;
+          } else {
+            atLeastOne311 = true;
+          }
+        }
+      }
+
+      if (atLeastOne311 && !iam3Other11) {
+        survey3isCheckboxAnswered11 = true;
+      } else {
+        survey3isCheckboxAnswered11 = false;
+      }
+
+      //survey 3 question 10
+      var textareaBox3 = document.getElementById("describeMore3").value;
+      if (textareaBox3 == "") {
+        survey3textBoxAnswered = false;
+        $("#describeMore3").attr("data-state", "invalid");
+      } else {
+        survey3textBoxAnswered = true;
+        $("#describeMore3").attr("data-state", "open");
+      }
+
+      //////////////////////////////////////////////
+      if (survey3IsRadioAnswered && survey3isCheckboxAnswered10 && survey3isCheckboxAnswered11 &&
+        survey3textBoxAnswered) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    function showPage(pageId) {
+      var ok = checkSurvey(pageId);
+      console.log("All fields valid? " + ok);
+      $(":valid").removeClass("invalid");
+      $(".lickert>input:valid").parents().removeClass("invalid");
+      $(".form-check>input:valid").parents().removeClass("invalid");
+      if (!ok) {
+        $("#cantSubmit").show();
+        $(":invalid").addClass("invalid");
+        $(".lickert>input:invalid").parents().addClass("invalid");
+        $(".form-check>input:invalid").parents().addClass("invalid");
+      } else {
+        $("#cantSubmit").hide();
+        $(":invalid").removeClass("invalid");
+        $(".lickert>input:invalid").parents().removeClass("invalid");
+        $(".form-check>input:invalid").parents().removeClass("invalid");
+        // Hide all pages
+        var pages = document.getElementsByName("pages");
+        for (var i = 0; i < pages.length; i++) {
+          pages[i].style.display = "none";
+        }
+        // Show the requested page
+        if (numOfStories == 3) {
+          document.getElementById(pageId).style.display = "block";
+        } else if (numOfStories == 2) {
+          if (pageId == 'page3') {
+            document.getElementById(pageId).style.display = "block";
+          } else if (pageId == 'page4') {
+            document.getElementById('page6').style.display = "block";
+          }
+        } else if (numOfStories == 1) {
+          document.getElementById('page6').style.display = "block";
+        }
+
+      }
+
+    }
+    //////////////////////////////////////////////////////////////////////////////
+    function handleDragStart(e) {
+      dragSrcEl = this;
+      e.dataTransfer.effectAllowed = 'move';
+      e.dataTransfer.setData('text/html', this.innerHTML);
+    }
+
+    function handleDragOver(e) {
+      if (e.preventDefault) {
+        e.preventDefault();
+      }
+
+      e.dataTransfer.dropEffect = 'move';
+
+      return false;
+    }
+
+    function handleDrop(e) {
+      if (e.stopPropagation) {
+        e.stopPropagation();
+      }
+
+      if (dragSrcEl != this) {
+        if (this.innerHTML == "First story" || this.innerHTML == "Second story" || this.innerHTML ==
+          "Third story") {
+          dragSrcEl.innerHTML = this.innerHTML;
+          this.innerHTML = e.dataTransfer.getData('text/html');
+        }
+      }
+
+      return false;
+    }
+
+    function handleDragEnd(e) {
+      var listItems = document.querySelectorAll('li[draggable]');
+
+      [].forEach.call(listItems, function (item) {
+
+        item.classList.remove('over');
+
+      });
+
+    }
+
+    function addEventListeners() {
+      var listItems = document.querySelectorAll('li');
+      [].forEach.call(listItems, function (item) {
+        item.addEventListener('dragstart', handleDragStart, false);
+        item.addEventListener('dragover', handleDragOver, false);
+        item.addEventListener('drop', handleDrop, false);
+        item.addEventListener('dragend', handleDragEnd, false);
+      });
+      var xmlHttp = new XMLHttpRequest();
+      var url = 'https://matlaberp8.media.mit.edu:5192/getPrompt/';
+      var request = new XMLHttpRequest();
+      request.open('POST', url, false);
+      request.setRequestHeader("Content-Type", "application/json");
+      request.send(JSON.stringify({
+        participantIDInput: id
+      }));
+
+      if (request.status == 200) {
+        var response = JSON.parse(request.responseText);
+        sessionNumber = response.showSessionNum;
+        if (sessionNumber >= 4) {
+          window.location.replace("stop.html?id=" + id);
+        } else {
+          document.getElementById("showParticipantID").innerHTML = response.showParticipantID;
+          document.getElementById("showSessionNum").innerHTML = sessionNumber;
+          if ((sessionNumber == 3 && PILOT_STUDY) || sessionNumber == 1) {
+            document.getElementById("demographic").style.display = "block";
+          }
+          if (sessionNumber == 3) {
+            document.getElementById("part6Div").style.display = "block";
+            flag = true;
+          }
+          document.getElementById("storywriting-section" + sessionNumber).style.display = "block"
+        }
+      }
+    }
+    window.onload = addEventListeners;
+
+    //survey1
+    function getOtherValue1() {
+      const otherCheckbox1 = document.getElementById("s1q10_option4");
+      const otherInput1 = document.getElementById("otherInput-1-10");
+      const otherCheckbox11 = document.getElementById("s1q11_option4");
+      const otherInput11 = document.getElementById("otherInput-1-11");
+      if (otherCheckbox1.checked) {
+        otherInput1.disabled = false;
+        otherCheckbox1.value = otherInput1.value;
+      } else {
+        otherInput1.disabled = true;
+        otherCheckbox1.value = "other";
+      }
+      if (otherCheckbox11.checked) {
+        otherInput11.disabled = false;
+        otherCheckbox11.value = otherInput11.value;
+      } else {
+        otherInput11.disabled = true;
+        otherCheckbox11.value = "other";
+      }
+      otherInput1.addEventListener("input", function () {
+        otherCheckbox1.value = this.value;
+      });
+      otherInput11.addEventListener("input", function () {
+        otherCheckbox11.value = this.value;
+      });
+    }
+
+    //survey2
+    function getOtherValue2() {
+      const otherCheckbox2 = document.getElementById("s2q10_option4");
+      const otherInput2 = document.getElementById("otherInput-2-10");
+      const otherCheckbox22 = document.getElementById("s2q11_option4");
+      const otherInput22 = document.getElementById("otherInput-2-11");
+      if (otherCheckbox2.checked) {
+        otherInput2.disabled = false;
+        otherCheckbox2.value = otherInput2.value;
+      } else {
+        otherInput2.disabled = true;
+        otherCheckbox2.value = "other";
+      }
+      if (otherCheckbox22.checked) {
+        otherInput22.disabled = false;
+        otherCheckbox22.value = otherInput22.value;
+      } else {
+        otherInput22.disabled = true;
+        otherCheckbox22.value = "other";
+      }
+      otherInput2.addEventListener("input", function () {
+        otherCheckbox2.value = this.value;
+      });
+      otherInput22.addEventListener("input", function () {
+        otherCheckbox22.value = this.value;
+      });
+    }
+
+    //survey3
+    function getOtherValue3() {
+      const otherCheckbox3 = document.getElementById("s3q10_option4");
+      const otherInput3 = document.getElementById("otherInput-3-10");
+      const otherCheckbox33 = document.getElementById("s3q11_option4");
+      const otherInput33 = document.getElementById("otherInput-3-11");
+      if (otherCheckbox3.checked) {
+        otherInput3.disabled = false;
+        otherCheckbox3.value = otherInput3.value;
+      } else {
+        otherInput3.disabled = true;
+        otherCheckbox3.value = "other";
+      }
+      if (otherCheckbox33.checked) {
+        otherInput33.disabled = false;
+        otherCheckbox33.value = otherInput33.value;
+      } else {
+        otherInput33.disabled = true;
+        otherCheckbox33.value = "other";
+      }
+      otherInput3.addEventListener("input", function () {
+        otherCheckbox3.value = this.value;
+      });
+      otherInput33.addEventListener("input", function () {
+        otherCheckbox33.value = this.value;
+      });
+    }
+    // submit test
+
+    var submit = document.getElementById("submitButton");
+    submit.addEventListener("click", function (event) {
+      event.preventDefault();
+      console.log("I will try to submit")
+
+      //survey1 answers
+      const selectedValues1 = [];
+      survey1_answers = [];
+      for (let i = 1; i <= 7; i++) {
+        const options1 = document.getElementsByName(`survey1-${i}`);
+        let selectedOption1;
+        for (const option of options1) {
+          if (option.checked) {
+            selectedOption1 = option.value;
+            break;
+          }
+        }
+        selectedValues1.push(selectedOption1);
+      }
+      //survey 1 question 8
+      const q10checkboxes1 = document.getElementsByName(`survey1-10[]`);
+      let checked1;
+      var checkedString1 = "[";
+      for (const checkbox of q10checkboxes1) {
+        if (checkbox.checked) {
+          checked1 = checkbox.value;
+          checkedString1 += (checked1 + ", ");
+        }
+      }
+      checkedString1 += "]";
+      survey1_answers = selectedValues1;
+      survey1_answers.push(checkedString1);
+      //survey 1 question 9
+      const q11checkboxes1 = document.getElementsByName(`survey1-11[]`);
+      let checked11;
+      var checkedString11 = "[";
+      for (const checkbox of q11checkboxes1) {
+        if (checkbox.checked) {
+          checked11 = checkbox.value;
+          checkedString11 += (checked11 + ", ");
+        }
+      }
+      checkedString11 += "]";
+      survey1_answers.push(checkedString11);
+      //survey 1 question 10 textbox
+      var describeMoreTextBoxValue = document.getElementById("describeMore").value;
+      survey1_answers.push(describeMoreTextBoxValue);
+
+      //survey2 answers
+      const selectedValues2 = [];
+      var survey2_answers = [];
+      for (let i = 1; i <= 7; i++) {
+        const options2 = document.getElementsByName(`survey2-${i}`);
+        let selectedOption2;
+        for (const option of options2) {
+          if (option.checked) {
+            selectedOption2 = option.value;
+            break;
+          }
+        }
+        selectedValues2.push(selectedOption2);
+      }
+      //survey 2 question 8
+      const q10checkboxes2 = document.getElementsByName(`survey2-10[]`);
+      let checked2;
+      var checkedString2 = "[";
+      for (const checkbox of q10checkboxes2) {
+        if (checkbox.checked) {
+          checked2 = checkbox.value;
+          checkedString2 += (checked2 + ", ");
+        }
+      }
+      checkedString2 += "]";
+      survey2_answers = selectedValues2;
+      survey2_answers.push(checkedString2);
+      //survey 2 question 9
+      const q11checkboxes2 = document.getElementsByName(`survey2-11[]`);
+      let checked22;
+      var checkedString22 = "[";
+      for (const checkbox of q11checkboxes2) {
+        if (checkbox.checked) {
+          checked22 = checkbox.value;
+          checkedString22 += (checked22 + ", ");
+        }
+      }
+      checkedString22 += "]";
+      survey2_answers.push(checkedString22);
+
+      //survey 2 question 10 textbox
+      var describeMoreTextBoxValue2 = document.getElementById("describeMore2").value;
+      survey2_answers.push(describeMoreTextBoxValue2);
+
+      //survey3 answers
+      const selectedValues3 = [];
+      survey3_answers = [];
+      for (let i = 1; i <= 7; i++) {
+        const options3 = document.getElementsByName(`survey3-${i}`);
+        let selectedOption3;
+        for (const option of options3) {
+          if (option.checked) {
+            selectedOption3 = option.value;
+            break;
+          }
+        }
+        selectedValues3.push(selectedOption3);
+      }
+      //survey 3 question 8
+      const q10checkboxes3 = document.getElementsByName(`survey3-10[]`);
+      let checked3;
+      var checkedString3 = "[";
+      for (const checkbox of q10checkboxes3) {
+        if (checkbox.checked) {
+          checked3 = checkbox.value;
+          checkedString3 += (checked3 + ", ");
+        }
+      }
+      checkedString3 += "]";
+      survey3_answers = selectedValues3;
+      survey3_answers.push(checkedString3);
+      //survey 3 question 9
+      const q11checkboxes3 = document.getElementsByName(`survey3-11[]`);
+      let checked33;
+      var checkedString33 = "[";
+      for (const checkbox of q11checkboxes3) {
+        if (checkbox.checked) {
+          checked33 = checkbox.value;
+          checkedString33 += (checked33 + ", ");
+        }
+      }
+      checkedString33 += "]";
+      survey3_answers.push(checkedString33);
+      var describeMoreTextBoxValue3 = document.getElementById("describeMore3").value;
+      survey3_answers.push(describeMoreTextBoxValue3);
+
+      var mostEmpathizedOrder = [];
+      mostEmpathizedOrder = Array.from(document.getElementById("sortable").children).map(x => x.innerHTML).slice(
+        0, numOfStories);
+      console.log(mostEmpathizedOrder)
+      var feedback = document.getElementById("commentbox").value;
+
+      var empathyWithAI = 0;
+      var hasValue = false;
+      if (flag) {
+        console.log("I will now get the value");
+        var empathyWithAILevels = document.getElementsByName('part6');
+        for (i = 0; i < empathyWithAILevels.length; i++) {
+          if (empathyWithAILevels[i].checked) {
+            empathyWithAI = empathyWithAILevels[i].value;
+            hasValue = true;
+            break;
+          } else {
+            hasValue = false;
+          }
+        }
+      }
+      console.log(flag);
+      console.log(empathyWithAI);
+      console.log(hasValue);
+
+      if (flag) {
+        if (hasValue) {
+          var obj = {
+            participantIDInput: id,
+            survey1_answers: survey1_answers,
+            survey2_answers: survey2_answers,
+            survey3_answers: survey3_answers,
+            mostEmpathizedOrder: mostEmpathizedOrder,
+            feedback: feedback,
+            empathyWithAI: empathyWithAI
+          };
+          console.log(obj);
+        } else {
+          document.getElementById('fillEmpathyWithAI').innerHTML = "Please select one of the options above."
+        }
+
+      } else {
+        var obj = {
+          participantIDInput: id,
+          survey1_answers: survey1_answers,
+          survey2_answers: survey2_answers,
+          survey3_answers: survey3_answers,
+          mostEmpathizedOrder: mostEmpathizedOrder,
+          feedback: feedback
+        };
+        console.log(obj);
+      }
+
+      //send POST request
+      if ((flag && hasValue) || !flag) {
+        var xmlHttp = new XMLHttpRequest();
+        var url = 'https://matlaberp8.media.mit.edu:5192/submitSurveyQuestions/';
+        var request = new XMLHttpRequest();
+        request.open('POST', url, true);
+        request.setRequestHeader("Content-Type", "application/json");
+        request.onreadystatechange = function () {
+          if (request.status == 200 && request.readyState == 4) {
+            document.getElementById("all-content").style.display = "block";
+            document.getElementById("loading").style.display = "none";
+            alert("Data submitted successfully!");
+            window.location.href = "sessionDone.html?id=" + id;
+          }
+        }
+        request.send(JSON.stringify(obj));
+      } else {
+        document.getElementById('fillEmpathyWithAI').innerHTML = "Please select one of the options above."
+        $("#cantSubmit").show();
+      }
+
+    });
+
+    // submit test ends here
+
+    function toggleConsent(checked) {
+      if (checked) {
+        $("#main-task").show();
+        $("#consent-message").hide();
+      } else {
+        $("#main-task").hide();
+        $("#consent-message").show();
+      }
+    }
+
+    function countSentences(text) {
+      var match = text.match(/[\w\)"][.?!](?:\s|$)/gm);
+      return match === null ? 0 : match.length;
+    }
+
+    function updateCounter(el, minS, maxS, minC, maxC) {
+      var name = el.id;
+      var counter = $("#" + name + "-sentence-counter");
+      var text = $(el).prop("value");
+      var nSents = countSentences(text);
+      var nChars = text.length;
+      var warnText = "";
+      counter.css('color', 'black');
+
+      if (nSents >= minS && nChars < maxC && nChars > minC)
+        warnText = " ✓";
+
+      if (nSents > maxS || nChars > maxC) {
+        warnText = " (try shortening it)";
+        counter.css('color', '#721c24');
+      }
+      counter.html(nSents + " sentences (" + nChars + " characters) detected" + warnText);
+    }
+
+    function checkSummary() {
+      var summary = $("#mainevent").prop("value");
+      var nSents = countSentences(summary);
+      if (summary.length > 50 && summary.length < 1000 && nSents >= 1) {
+        $("#mainevent").attr("data-state", "open");
+        $("#mainevent-length-warning").hide();
+        return true;
+      } else {
+        $("#mainevent").attr("data-state", "invalid");
+        $("#mainevent-length-warning").show();
+        return false;
+      }
+    }
+
+    function checkUserStory() {
+      var summary = $("#userstory").prop("value");
+      var nSents = countSentences(summary);
+      if (summary.length > 500 && summary.length < 10000 && nSents >= 5) {
+        $("#userstory").attr("data-state", "open");
+        $("#userstory-length-warning").hide();
+        return true;
+      } else {
+        $("#userstory").attr("data-state", "invalid");
+        $("#userstory-length-warning").show();
+        return false;
+      }
+    }
+
+    function checkEmotion1() {
+      var summary = $("#emotion1").prop("value");
+      var nSents = countSentences(summary);
+      if (summary.length > 150 && summary.length < 1000 && nSents >= 2) {
+        $("#emotion1").attr("data-state", "open");
+        $("#emotion1-length-warning").hide();
+        return true;
+      } else {
+        $("#emotion1").attr("data-state", "invalid");
+        $("#emotion1-length-warning").show();
+        return false;
+      }
+    }
+
+    function checkMoral() {
+      var summary = $("#moral").prop("value");
+      var nSents = countSentences(summary);
+      if (summary.length > 100 && summary.length < 1000 && nSents >= 1) {
+        $("#moral").attr("data-state", "open");
+        $("#moral-length-warning").hide();
+        return true;
+      } else {
+        $("#moral").attr("data-state", "invalid");
+        $("#moral-length-warning").show();
+        return false;
+      }
+    }
+
+    function checkEmpathyResponses2() {
+      var empathy1 = $("#empathy-1-yes").prop("value");
+      var empathy2 = $("#empathy-2-yes").prop("value");
+      var empathy3 = $("#empathy-3-yes").prop("value");
+      var empathy4 = $("#empathy-4-yes").prop("value");
+      var empathy5 = $("#empathy-5-yes").prop("value");
+      var nSents1 = countSentences(empathy1);
+      var nSents2 = countSentences(empathy2);
+      var nSents3 = countSentences(empathy3);
+      var nSents4 = countSentences(empathy4);
+      var nSents5 = countSentences(empathy5);
+      var empathy1valid = empathy1.length > 40 && empathy1.length < 1000 && nSents1 >= 1;
+      var empathy2valid = empathy2.length > 40 && empathy2.length < 1000 && nSents2 >= 1;
+      var empathy3valid = (empathy3.length > 50 && empathy3.length < 1000 && nSents3 >= 1) || empathy3.length == 0;
+      var empathy4valid = (empathy4.length > 50 && empathy4.length < 1000 && nSents4 >= 1) || empathy4.length == 0;
+      var empathy5valid = (empathy5.length > 50 && empathy5.length < 1000 && nSents5 >= 1) || empathy5.length == 0;
+
+      if (empathy1valid && empathy2valid && empathy3valid && empathy4valid && empathy5valid) {
+        $("#empathy-1-yes").attr("data-state", "open");
+        $("#empathy-2-yes").attr("data-state", "open");
+        $("#empathy-3-yes").attr("data-state", "open");
+        $("#empathy-4-yes").attr("data-state", "open");
+        $("#empathy-5-yes").attr("data-state", "open");
+        $("#empathy-length-warning").hide();
+        console.log("EVERYTHING VALID")
+        return true;
+      } else {
+        if (!empathy1valid) {
+          $("#empathy-1-yes").attr("data-state", "invalid");
+          console.log("1")
+        } else {
+          $("#empathy-1-yes").attr("data-state", "open");
+
+        }
+        if (!empathy2valid) {
+          $("#empathy-2-yes").attr("data-state", "invalid");
+        } else {
+          $("#empathy-2-yes").attr("data-state", "open");
+
+        }
+        if (!empathy3valid) {
+          $("#empathy-3-yes").attr("data-state", "invalid");
+        } else {
+          $("#empathy-3-yes").attr("data-state", "open");
+
+        }
+        if (!empathy4valid) {
+          $("#empathy-4-yes").attr("data-state", "invalid");
+        } else {
+          $("#empathy-4-yes").attr("data-state", "open");
+
+        }
+        if (!empathy5valid) {
+          $("#empathy-5-yes").attr("data-state", "invalid");
+        } else {
+          $("#empathy-5-yes").attr("data-state", "open");
+
+        }
+        $("#empathy-length-warning").show();
+        return false;
+      }
+    }
+  </script>
+</body>
+
+<style type="text/css">
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 400;
+  }
+
+  #sortable {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #sortable li {
+    background-color: #eee;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: move;
+  }
+
+  #high-cog-instructions {
+    border-radius: .5em;
+    border: .75px solid black;
+    padding: .5em;
+    background-color: white;
+  }
+
+  .section {
+    padding-top: 15px;
+  }
+
+  .lickert>label {
+    font-size: smaller;
+  }
+
+  textarea[data-state="open"] {
+    background-color: white;
+    border-color: #ced4da;
+    color: #495057;
+  }
+
+  textarea[data-state="invalid"],
+  textarea[data-state="invalid"]:active,
+  textarea[data-state="invalid"]:focus,
+  textarea[data-state="invalid"]:focus-within {
+    background-color: #f5c6cb;
+    border-color: #D22437;
+    color: #721c24;
+  }
+
+  input.form-check-input {
+    padding-right: 10px;
+  }
+
+  ul>li:before {
+    margin-left: -1em;
+    margin-right: .25em;
+  }
+
+  .corr {
+    font-weight: bold;
+  }
+
+  ul>li.corr:before {
+    content: "\2713";
+  }
+
+  ul>li.inco:before {
+    content: "\2717";
+  }
+
+  .form-check.invalid,
+  .lickert.invalid,
+  input.invalid,
+  select.invalid {
+    border: .1em solid #D22437;
+    border-radius: .1em;
+    background-color: #f5c6cb;
+    padding: .1em;
+  }
+</style>

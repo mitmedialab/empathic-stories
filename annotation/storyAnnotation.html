@@ -1,0 +1,1114 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+
+
+<div class="container">
+  <div class="card">
+    <h5 class="card-header bg-primary text-white">Data collection & sharing</h5>
+    <div class="card-body">
+      <p class="card-text">
+        <p>
+        </p>
+        <small>
+          <p><i>This HIT is part of a MIT scientific research project. Your decision to complete this HIT is
+              voluntary. There is no way for us to identify you. The only information we will have, in addition to
+              your responses, is the time at which you completed the survey. The results of the research may be
+              presented at scientific meetings or published in scientific journals. Clicking on the ‘SUBMIT’ button on
+              the bottom of this page indicates that you are at least 18 years of age and agree to complete this HIT
+              voluntarily.</i></p>
+
+        </small>
+      </p>
+      </p>
+    </div>
+  </div>
+
+  <div class="p-3">
+    <div class="card" id="instructions" style="display:none">
+      <h5 class="card-header" style="background: #e9ecef;">
+        Instructions
+        <a data-toggle="collapse" href="#fullInstructions" role="button" aria-expanded="false"
+          aria-controls="fullInstructions">[expand/collapse]</a>
+      </h5>
+
+      <div class="card-body collapse show bg-light" id="fullInstructions">
+        <p class="card-text">
+          <div class="row">
+            <div class="col-12">
+              <p>You will be given a personal story to read and asked to answer some questions about the story.<br>
+                <b>Please read the following example story and example responses carefully</b></p>
+
+              <h4>Part 1: Reflect on your emotions</h4>
+              You will first answer a brief check in about your current emotional state.
+
+
+              <h4 class="mt-4">Part 2: Read the story carefully</h4>
+              <h5>Example Story</h5>
+              <p style="color:blue">
+                I remember one woman in particular who had gotten on my bus and seemed completely lost. I
+                could see she was confused. I said, "Are you okay?" She said "Oh I'm fine, but I don't know
+                what restaurant I'm meeting my friends at." I said, "You sit in the bus, and I'll run in and check
+                each
+                restaurant." I checked each restaurant, and finally, the last one was it. I ran back to the bus and
+                said
+                "Sweetie, your restaurant is right here." And then she said, "I have been diagnosed with cancer. And
+                today is the best day of my life." Just because I helped her.
+              </p>
+
+              <h4>Part 3: Answer some questions about the story</h4>
+
+              <h5 class="mt-4">
+                1. What is the <b style="color: orange">main event</b> being described in the story?
+              </h5>
+              <p style="margin:0">Good/bad examples include:</p>
+
+              <ul style="list-style: none;">
+                <li class="corr"><em>The story is about a bus driver helping a woman when she was lost and making her
+                    day better, despite her receiving hard news of a cancer diagnosis.
+                  </em></li>
+                <li class="inco"><em>This story is about a bus driver.</em> &rarr; <em>too vague</em></li>
+                <li class="inco"><em>This story is about cancer.</em> &rarr; too vague, misses the main action of the
+                  narrator (helping the woman)</li>
+                <li class="inco"><em>This story is about a bus driver searching restaurants to help a lost woman who
+                    has
+                    cancer and says that it's the best day of her life because the driver helped her.</em> &rarr; too
+                  specific, unnecessary details</li>
+              </ul>
+
+              <h5 class="mt-4">
+                2. Describe the emotions the <b style="color: purple">narrator</b> feels <b>before and after</b> the
+                main event and
+                <b>why</b>
+                they feel
+                this way. <br> <small>Answer as
+                  though you were
+                  explaining how the narrator felt to someone who knew nothing about the situation. </small></h5>
+
+              <p style="margin:0">Good/bad examples include:</p>
+              <ul style="list-style: none;">
+                <li class="corr"><em>The narrator feels compassionate towards the woman who seems lost and want to
+                    help
+                    her. They feel fulfilled knowing that their help impacted someone else positively.
+                  </em></li>
+                <li class="inco"><em>The narrator feels compassion and satisfaction</em> &rarr; <em>no
+                    explanation, just listing emotions</em></li>
+                <li class="inco"><em>The narrator feels a mixture of emotions that are positive.</em> &rarr; too vague
+                </li>
+                <li class="inco"><em>The narrator feels sad</em> &rarr; incorrect</li>
+              </ul>
+
+              <h5 class="mt-4">
+                3. What is the <b style="color: green">high-level lesson</b> or takeaway (ie. moral) of the story?</h5>
+
+              <p style="margin:0">Good/bad examples include:</p>
+              <ul style="list-style: none;">
+                <li class="corr"><em>The moral of the story is that you can make someone's day better by helping them.
+                  </em></li>
+                <li class="inco"><em>The takeaway is that you should help people off buses</em>&rarr; not a high-level
+                  takeaway</li>
+              </ul>
+              <h5 class="mt-4">
+                4. What do you think you or other people would empathize with most in the story? <br> <small> List at
+                  minimum 2
+                  reasons, but write as many
+                  reasons as you can think of.</small> </h5>
+              <p style="margin:0">Good/bad examples include:</p>
+
+              <ul style="list-style: none;">
+                <li class="corr"><em>Someone might empathize with wanting to help someone in need.
+
+                  </em></li>
+                <li class="corr"><em>Someone could
+                    empathize with the feeling of making someone's day better with a small gesture.
+
+                  </em></li>
+                <li class="corr"><em>Someone could
+                    empathize with the woman having cancer.
+
+                  </em></li>
+                <li class="corr"><em>Someone could
+                    empathize with being lost and confused.
+
+                  </em></li>
+                <li class="inco"><em>I did not empathize with this story</em> &rarr; <em>need to find anything
+                    that others could relate to</em></li>
+                <li class="inco"><em>People can empathize with being on a bus</em> &rarr; <em>impersonal and
+                    irrelevant
+                    to the emotions present in the story</em></li>
+              </ul>
+
+              <h4>Part 4: Answer some questions about yourself and the task</h4>
+              You will then answer a final question about the story and provide some demographic information about
+              yourself.
+              <h4 class="mt-4" style="color:red"> Your hit will be rejected if you:<br> </h4>
+              <p style="color:red;;">
+                - use automated text generation (e.g. GPT-3 / ChatGPT) <br>
+                - copy and paste/use narration to clone answers from elsewhere OR within the task (ie. examples,
+                previous free response answers) <br>
+                - give incoherent/gibberish answers
+                <br><b><u><i> so please read the story and questions carefully, and answer to the best of your ability.
+                      Thank you!</i></u></b>
+              </p>
+
+              <p id="howmanytimes" style="color:red"><br><b><u><i>Note that there may be a cap on how many times you can
+                      do the task. If you see a message indicating so, please return.</i></u></b></p>
+            </div>
+          </div>
+        </p>
+      </div>
+    </div>
+  </div>
+  <p id="didalready"></p>
+  <div class="p-3" id="all-content" style="display:none">
+
+    <div class="row justify-content-center" id="consent-div">
+      <div class="col-12 mt-4">
+        <h5>Agree to the task</h5>
+        <div class="form-check">
+          <label class="form-check-label" for="consent">
+            <input class="form-check-input" type="checkbox" id="consent" name="consent"
+              onclick="toggleConsent(this.checked)" required>
+            I certify that I have <strong>carefully read</strong> the instructions and <strong>agree</strong> with the
+            terms of this study.
+          </label>
+        </div>
+        <br>
+        <div class="alert alert-warning" id="consent-message" style="max-width: 400px;margin: auto;">
+          You must check the box to continue the task!
+        </div>
+      </div>
+    </div>
+    <div id="main-task" style="display:none">
+
+      <div class="row justify-content-center">
+        <div class="col-11 section" id="reflection-section">
+          <h4 class="mt-4"><label for="story">Part 1: Reflect on your emotions right now</label></h4>
+          <h6 class="mt-4">Valence (how pleasant or unpleasant you are feeling)</h6>
+          <div class="form-check form-check-inline ml-3 lickert">
+            <label class="form-check-label" for="val1">Unpleasant &nbsp;</label>
+            <input class="form-check-input right" type="radio" name="val" id="val1" value="1" required>
+          </div>
+          <div class="form-check form-check-inline lickert">
+            <label class="form-check-label" for="val2">&nbsp;</label>
+            <input class="form-check-input right" type="radio" name="val" id="val2" value="2">
+          </div>
+          <div class="form-check form-check-inline lickert">
+            <label class="form-check-label" for="val3">&nbsp;</label>
+            <input class="form-check-input right" type="radio" name="val" id="val3" value="3">
+          </div>
+          <div class="form-check form-check-inline lickert">
+            <label class="form-check-label" for="val4">&nbsp;</label>
+            <input class="form-check-input right" type="radio" name="val" id="val4" value="4">
+          </div>
+          <div class="form-check form-check-inline lickert">
+            <label class="form-check-label" for="val5">&nbsp;</label>
+            <input class="form-check-input" type="radio" name="val" id="val5" value="5">
+          </div>
+          <div class="form-check form-check-inline lickert">
+            <label class="form-check-label" for="val6">&nbsp; </label>
+
+            <input class="form-check-input" type="radio" name="val" id="val6" value="6">
+          </div>
+          <div class="form-check form-check-inline lickert">
+            <label class="form-check-label" for="val7">&nbsp; </label>
+
+            <input class="form-check-input" type="radio" name="val" id="val7" value="7">
+          </div>
+          <div class="form-check form-check-inline lickert">
+            <label class="form-check-label" for="val8">&nbsp; </label>
+
+            <input class="form-check-input" type="radio" name="val" id="val8" value="8">
+          </div>
+          <div class="form-check form-check-inline lickert">
+            <label class="form-check-label" for="val9">&nbsp;</label>
+            <input class="form-check-input" type="radio" name="val" id="val9" value="9">
+            <label class="form-check-label" for="val9">&nbsp; Extremely happy</label>
+          </div>
+
+          <h6 class="mt-4">Arousal (how strong your feelings are)</h6>
+          <div class="form-check form-check-inline ml-3 lickert">
+            <label class="form-check-label" for="arousal1">Sleepy/tired &nbsp;</label>
+            <input class="form-check-input right" type="radio" name="arousal" id="arousal1" value="1" required>
+          </div>
+          <div class="form-check form-check-inline lickert">
+            <label class="form-check-label" for="arousal2">&nbsp;</label>
+            <input class="form-check-input right" type="radio" name="arousal" id="arousal2" value="2">
+          </div>
+          <div class="form-check form-check-inline lickert">
+            <label class="form-check-label" for="arousal3">&nbsp;</label>
+            <input class="form-check-input right" type="radio" name="arousal" id="arousal3" value="3">
+          </div>
+          <div class="form-check form-check-inline lickert">
+            <label class="form-check-label" for="arousal4">&nbsp;</label>
+            <input class="form-check-input right" type="radio" name="arousal" id="arousal4" value="4">
+          </div>
+          <div class="form-check form-check-inline lickert">
+            <label class="form-check-label" for="arousal5">&nbsp;</label>
+            <input class="form-check-input" type="radio" name="arousal" id="arousal5" value="5">
+          </div>
+          <div class="form-check form-check-inline lickert">
+            <label class="form-check-label" for="arousal6">&nbsp; </label>
+
+            <input class="form-check-input" type="radio" name="arousal" id="arousal6" value="6">
+          </div>
+          <div class="form-check form-check-inline lickert">
+            <label class="form-check-label" for="arousal7">&nbsp; </label>
+
+            <input class="form-check-input" type="radio" name="arousal" id="arousal7" value="7">
+          </div>
+          <div class="form-check form-check-inline lickert">
+            <label class="form-check-label" for="arousal8">&nbsp; </label>
+
+            <input class="form-check-input" type="radio" name="arousal" id="arousal8" value="8">
+          </div>
+          <div class="form-check form-check-inline lickert">
+            <label class="form-check-label" for="arousal9">&nbsp;</label>
+            <input class="form-check-input" type="radio" name="arousal" id="arousal9" value="9">
+            <label class="form-check-label" for="arousal9">&nbsp; Energetic/Aroused</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-11 section" id="storywriting-section">
+          <h4><label for="story">Part 2: Read the story carefully</label></h4>
+          <p style="color:blue">${story_formatted}</p>
+
+        </div>
+      </div>
+      <div id="rest-task">
+        <div class="row justify-content-center">
+          <div class="col-11 section">
+            <h4><label for="summary">Part 3: Answer questions about the story</label></h4>
+            <h5 style="margin-top:.5rem">
+              1. What is the <b style="color: orange">main event</b> being described in the story?
+
+            </h5>
+            <p class="mt-3">
+              <small>Response must be <em>at least 1 sentence</em> and <em>50-1000 characters</em> including
+                spaces.</small>
+              <br>
+
+            </p>
+            <div class="row">
+              <div class="col-8">
+
+                <div class="form-group">
+                  <textarea class="form-control" name="mainevent" id="mainevent" rows="5"
+                    oninput="updateCounter(this,1,100,50,1000);" required></textarea>
+                  <span id="mainevent-sentence-counter">0 sentences (0 characters) detected</span>
+
+                </div>
+                <div id="mainevent-length-warning" class="col-6 alert alert-danger" style="display: none;">
+                  Response must be at least 1 sentence, between 50 and 1000 characters (including spaces).
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card-body collapse bg-light" id="examplestory">
+                  <p class="card-text">
+                    <div class="row">
+                      <div class="col-12">
+
+                        <small>
+                          I remember one woman in particular who had gotten on my bus and seemed completely lost. I
+                          could see she was confused. I said, "Are you okay?" She said "Oh I'm fine, but I don't know
+                          what restaurant I'm meeting my friends at." I said, "You sit in the bus, and I'll run in and
+                          check each
+                          restaurant." I checked each restaurant, and finally, the last one was it. I ran back to the
+                          bus and said
+                          "Sweetie, your restaurant is right here." And then she said, "I have been diagnosed with
+                          cancer. And
+                          today is the best day of my life." Just because I helped her.
+                        </small>
+
+                      </div>
+                    </div>
+                  </p>
+                </div>
+                <small>Good/bad examples for the <a data-toggle="collapse" href="#examplestory" role="button"
+                    aria-expanded="false" aria-controls="examplestory">example story</a> include:
+                  <ul style="padding-inline-start: 1.25em; list-style: none;">
+                    <li class="corr"><em>The story is about a bus driver helping a woman when she was lost and making
+                        her
+                        day better, despite her receiving hard news of a cancer diagnosis.
+                      </em></li>
+                    <li class="inco"><em>This story is about a bus driver.</em> &rarr; <em>too vague</em></li>
+                    <li class="inco"><em>This story is about cancer.</em> &rarr; too vague, misses the main action of
+                      the
+                      narrator (helping the woman)</li>
+                    <li class="inco"><em>This story is about a bus driver searching restaurants to help a lost woman who
+                        has
+                        cancer and says that it's the best day of her life because the driver helped her.</em> &rarr;
+                      too
+                      specific, unnecessary details</li>
+                  </ul>
+                </small>
+              </div>
+            </div>
+
+
+
+
+
+            <h5 class="mt-4">
+              2. Describe the emotions the <b style="color: purple">narrator</b> feels <b>before and after</b> the main
+              event and <b>why</b>
+              they feel
+              this way. <br> Answer as
+              though you were
+              explaining how the narrator felt to someone who knew nothing about the situation. <br>
+
+            </h5>
+            <p class="mt-3">
+              <small>Response must be <em>at least 2 sentences</em> and <em>150-1000 characters</em> including
+                spaces.</small>
+              <br>
+
+            </p>
+            <div class="row">
+              <div class="col-8">
+
+                <div class="form-group">
+                  <textarea class="form-control" name="emotion1" id="emotion1"
+                    oninput="updateCounter(this,2,100,150,1000);" rows="5" required></textarea>
+                  <span id="emotion1-sentence-counter">0 sentences (0 characters) detected</span>
+
+                </div>
+                <div id="emotion1-length-warning" class="col-6 alert alert-danger" style="display: none;">
+                  Response must be at least 2 sentences, between 150 and 1000 characters (including spaces).
+                </div>
+
+              </div>
+              <div class="col-4">
+                <div class="card-body collapse bg-light" id="examplestory2">
+                  <p class="card-text">
+                    <div class="row">
+                      <div class="col-12">
+
+                        <small>
+                          I remember one woman in particular who had gotten on my bus and seemed completely lost. I
+                          could see she was confused. I said, "Are you okay?" She said "Oh I'm fine, but I don't know
+                          what restaurant I'm meeting my friends at." I said, "You sit in the bus, and I'll run in and
+                          check each
+                          restaurant." I checked each restaurant, and finally, the last one was it. I ran back to the
+                          bus and said
+                          "Sweetie, your restaurant is right here." And then she said, "I have been diagnosed with
+                          cancer. And
+                          today is the best day of my life." Just because I helped her.
+                        </small>
+
+                      </div>
+                    </div>
+                  </p>
+                </div>
+                <small>Good/bad examples for the <a data-toggle="collapse" href="#examplestory2" role="button"
+                    aria-expanded="false" aria-controls="examplestory2">example story</a> include:
+                  <ul style="padding-inline-start: 1.25em; list-style: none;">
+                    <li class="corr"><em>The narrator feels compassionate towards the woman who seems lost and want to
+                        help
+                        her. They feel fulfilled knowing that their help impacted someone else positively.
+                      </em></li>
+                    <li class="inco"><em>The narrator feels compassion and satisfaction</em> &rarr; <em>no
+                        explanation, just listing emotions</em></li>
+                    <li class="inco"><em>The narrator feels a mixture of emotions that are positive.</em> &rarr; too
+                      vague
+                    </li>
+                    <li class="inco"><em>The narrator feels sad</em> &rarr; incorrect</li>
+                  </ul>
+                </small>
+              </div>
+            </div>
+
+            <h5 class="mt-4">
+              3. What is the <b style="color: green">high-level lesson</b> or takeaway (ie. moral) of the story?<br>
+
+            </h5>
+            <p class="mt-3">
+              <small>Response must be <em>at least 1 sentence</em> and <em>100-1000 characters</em> including
+                spaces.</small>
+            </p>
+            <div class="row">
+              <div class="col-8">
+
+                <div class="form-group">
+                  <textarea class="form-control" name="moral" id="moral" rows="5"
+                    oninput="updateCounter(this,1,100,100,1000);" required></textarea>
+                  <span id="moral-sentence-counter">0 sentences (0 characters) detected</span>
+
+                </div>
+                <div id="moral-length-warning" class="col-6 alert alert-danger" style="display: none;">
+                  Response must be at least 1 sentence, between 100 and 1000 characters (including spaces).
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card-body collapse bg-light" id="examplestory3">
+                  <p class="card-text">
+                    <div class="row">
+                      <div class="col-12">
+
+                        <small>
+                          I remember one woman in particular who had gotten on my bus and seemed completely lost. I
+                          could see she was confused. I said, "Are you okay?" She said "Oh I'm fine, but I don't know
+                          what restaurant I'm meeting my friends at." I said, "You sit in the bus, and I'll run in and
+                          check each
+                          restaurant." I checked each restaurant, and finally, the last one was it. I ran back to the
+                          bus and said
+                          "Sweetie, your restaurant is right here." And then she said, "I have been diagnosed with
+                          cancer. And
+                          today is the best day of my life." Just because I helped her.
+                        </small>
+
+                      </div>
+                    </div>
+                  </p>
+                </div>
+                <small>Good/bad examples for the <a data-toggle="collapse" href="#examplestory3" role="button"
+                    aria-expanded="false" aria-controls="examplestory3">example story</a> include:
+                  <ul style="padding-inline-start: 1.25em; list-style: none;">
+                    <li class="corr"><em>The moral of the story is that you can make someone's day better by helping
+                        them.
+                      </em></li>
+                    <li class="inco"><em>The takeaway is that you should help people off buses</em>&rarr; not a
+                      high-level
+                      takeaway</li>
+                  </ul>
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="form-group col-11 section">
+
+
+            <h5 class="mt-4">
+              4. Rate the extent to which you agree with the statement, "Other people would empathize with this story."
+            </h5>
+
+            <div class="form-check  lickert">
+              <input class="form-check-input right" type="radio" name="likert2" id="strongly-disagree-2" value="1"
+                required> <label class="form-check-label" for="strongly-disagree-2">&nbsp; Strongly disagree </label>
+            </div>
+            <div class="form-check lickert">
+              <input class="form-check-input right" type="radio" name="likert2" id="somewhat-disagree-2" value="2">
+              <label class="form-check-label" for="somewhat-disagree-2">&nbsp; Disagree</label>
+
+            </div>
+            <div class="form-check lickert">
+              <input class="form-check-input right" type="radio" name="likert2" id="neutral-2" value="3">
+              <label class="form-check-label" for="neutral-2">&nbsp; Neutral</label>
+
+            </div>
+            <div class="form-check lickert">
+              <input class="form-check-input right" type="radio" name="likert2" id="somewhat-agree-2" value="4">
+              <label class="form-check-label" for="somewhat-agree-2">&nbsp; Agree</label>
+
+            </div>
+            <div class="form-check lickert">
+              <input class="form-check-input" type="radio" name="likert2" id="strongly-agree-2" value="5">
+              <label class="form-check-label" for="strongly-agree-2">&nbsp; Strongly agree</label>
+            </div>
+
+
+
+            <div id="next-question-2-yes">
+              <h5 style="margin-top:0.5rem">
+                What do you think you or other people would empathize with most in the story? <br> <small> List at
+                  minimum 2
+                  reasons, but write as many
+                  reasons as you can think of. <br> <b style="color:red">Reasons must be different in order to be
+                    accepted.</b></small> <br>
+
+              </h5>
+              <p class="mt-3">
+                <small>Enter each response in a new textbox. Each response must be <em>at least 1 sentence</em> and
+                  <em>50-1000 characters</em> including spaces.</small>
+                <br>
+
+              </p>
+              <div class="row">
+                <div class="col-8">
+
+                  <div class="form-group">
+                    <textarea class="form-control" name="empathy-1-yes" id="empathy-1-yes" rows="1"
+                      placeholder="reason 1..." oninput="updateCounter(this,1,100,50,1000);" required></textarea>
+                    <span id="empathy-1-yes-sentence-counter">0 sentences (0 characters) detected</span>
+                    <textarea class="form-control" name="empathy-2-yes" id="empathy-2-yes" rows="1"
+                      placeholder="reason 2..." oninput="updateCounter(this,1,100,50,1000);" required></textarea>
+                    <span id="empathy-2-yes-sentence-counter">0 sentences (0 characters) detected</span>
+                    <textarea class="form-control" name="empathy-3-yes" id="empathy-3-yes" rows="1"
+                      placeholder="reason 3..." oninput="updateCounter(this,1,100,50,1000);"></textarea>
+                    <span id="empathy-3-yes-sentence-counter">0 sentences (0 characters) detected</span>
+                    <textarea class="form-control" name="empathy-4-yes" id="empathy-4-yes" rows="1"
+                      placeholder="reason 4..." oninput="updateCounter(this,1,100,50,1000);"></textarea>
+                    <span id="empathy-4-yes-sentence-counter">0 sentences (0 characters) detected</span>
+                    <textarea class="form-control" name="empathy-5-yes" id="empathy-5-yes" rows="1"
+                      placeholder="reason 5..." oninput="updateCounter(this,1,100,50,1000);"></textarea>
+                    <span id="empathy-5-yes-sentence-counter">0 sentences (0 characters) detected</span>
+
+                  </div>
+                  <div id="empathy-length-warning" class="col-6 alert alert-danger" style="display: none;">
+                    Response must be at least 1 sentence between 50 and 1000 characters (including spaces).
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="card-body collapse bg-light" id="examplestory4">
+                    <p class="card-text">
+                      <div class="row">
+                        <div class="col-12">
+
+                          <small>
+                            I remember one woman in particular who had gotten on my bus and seemed completely lost. I
+                            could see she was confused. I said, "Are you okay?" She said "Oh I'm fine, but I don't know
+                            what restaurant I'm meeting my friends at." I said, "You sit in the bus, and I'll run in and
+                            check each
+                            restaurant." I checked each restaurant, and finally, the last one was it. I ran back to the
+                            bus and said
+                            "Sweetie, your restaurant is right here." And then she said, "I have been diagnosed with
+                            cancer. And
+                            today is the best day of my life." Just because I helped her.
+                          </small>
+
+                        </div>
+                      </div>
+                    </p>
+                  </div>
+                  <small>Good/bad examples for the <a data-toggle="collapse" href="#examplestory4" role="button"
+                      aria-expanded="false" aria-controls="examplestory4">example story</a> include:
+                    <ul style="padding-inline-start: 1.25em; list-style: none;">
+                      <li class="corr"><em>Someone might empathize with wanting to help someone in need.
+
+                        </em></li>
+                      <li class="corr"><em>Someone could
+                          empathize with the feeling of making someone's day better with a small gesture.
+
+                        </em></li>
+                      <li class="corr"><em>Someone could
+                          empathize with the woman having cancer.
+
+                        </em></li>
+                      <li class="corr"><em>Someone could
+                          empathize with being lost and confused.
+
+                        </em></li>
+                      <li class="inco"><em>I did not empathize with this story</em> &rarr; <em>need to find anything
+                          that others could relate to</em></li>
+                      <li class="inco"><em>People can empathize with being on a bus</em> &rarr; <em>impersonal and
+                          irrelevant to the emotions present in the story</em></li>
+
+                    </ul>
+                  </small>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="form-group col-11 section">
+            <h4><label for="summary">Part 4: Tell us about yourself and this writing task</label></h4>
+            <h5 class="mt-4">
+              1. Rate the extent to which you agree with the statement, "The story was well-written."
+            </h5>
+
+            <div class="form-check  lickert">
+              <input class="form-check-input right" type="radio" name="likert3" id="strongly-disagree-3" value="1"
+                required> <label class="form-check-label" for="strongly-disagree-2">&nbsp; Strongly disagree </label>
+            </div>
+            <div class="form-check lickert">
+              <input class="form-check-input right" type="radio" name="likert3" id="somewhat-disagree-3" value="2">
+              <label class="form-check-label" for="somewhat-disagree-3">&nbsp; Disagree</label>
+
+            </div>
+            <div class="form-check lickert">
+              <input class="form-check-input right" type="radio" name="likert3" id="neutral-3" value="3">
+              <label class="form-check-label" for="neutral-3">&nbsp; Neutral</label>
+
+            </div>
+            <div class="form-check lickert">
+              <input class="form-check-input right" type="radio" name="likert3" id="somewhat-agree-3" value="4">
+              <label class="form-check-label" for="somewhat-agree-3">&nbsp; Agree</label>
+
+            </div>
+            <div class="form-check lickert">
+              <input class="form-check-input" type="radio" name="likert3" id="strongly-agree-3" value="5">
+              <label class="form-check-label" for="strongly-agree-3">&nbsp; Strongly agree</label>
+            </div>
+
+            <h5 class="mt-4">2. How do you identify?<br><small>Select "prefer not to answer" if needed.</small></h5>
+            <div class="form-group row mt-3">
+              <label for="gender" class="col-sm-2 col-form-label">Gender identity</label>
+              <div class="col-sm-4">
+                <select id="annotatorGender" name="annotatorGender" class="form-control" style="font-size: .85rem;"
+                  required>
+                  <option disabled selected value="">-- please select --</option>
+                  <option value="man">Man/Male</option>
+                  <option value="woman">Woman/Female</option>
+                  <option value="transman">Trans man</option>
+                  <option value="transwoman">Trans woman</option>
+                  <option value="nonBinary">Non-binary</option>
+                  <option value="other">Other</option>
+                  <option value="na">- prefer not to disclose -</option>
+                </select>
+              </div>
+              <div class="col-sm-4"><small>Please select the gender identity you most identify with
+                  currently.</small>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="annotatorAge" class="col-sm-2 col-form-label">Age (years)</label>
+              <div class="col-sm-4">
+                <input type="number" id="age" name="age" placeholder="-" class="form-control" min="18" max="100">
+
+              </div>
+              <div class="col-sm-4"><small>Leave blank if you do not wish to disclose</small></div>
+
+            </div>
+            <div class="form-group row">
+              <label for="race" class="col-sm-2 col-form-label">Race/ethnicity</label>
+              <div class="col-sm-4">
+                <select id="annotatorRace" name="annotatorRace" class="form-control" style="font-size: .85rem;"
+                  required>
+                  <option disabled selected value="">-- please select --</option>
+                  <option value="asian">Asian/Asian American</option>
+                  <option value="indian">South Asian/Indian American</option>
+                  <option value="black">Black/African American</option>
+                  <option value="hisp">Hispanic/Latinx</option>
+                  <option value="white">White/Caucasian</option>
+                  <option value="middleEastern">Middle Eastern</option>
+                  <option value="islander">Native Hawaiian/Pacific Islander</option>
+                  <option value="native">Native American/First Nations</option>
+                  <option value="other">Mixed/other</option>
+                  <option value="na">- prefer not to disclose -</option>
+                </select>
+              </div>
+              <div class="col-sm-4"><small>Please select the racial/ethnic identity you most identify with
+                  currently.</small></div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="certify-no-pii-story" name="certify-no-pii-story"
+                  required>
+                <label class="form-check-label" for="certify-no-pii-story">
+                  I certify that my responses contain no personally identifiable information (name, address, SSN,
+                  etc)
+                  about
+                  myself or anyone else.
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-4">
+          <div class="col-11 section"></div>
+          <div class="col-8 text-center" style="font-size: 10pt;">
+            <p>
+              Optional Feedback: Thanks for filling out hit above!
+              If something about the hit was unclear, please either leave a comment in the box below!
+              We would like to make this HIT easier for future workers, so we really appreciate feedback though it
+              is
+              optional.
+            </p>
+            <textarea id="commentbox" name="commentbox" class="form-control" style="width: 100%;"></textarea><br>
+            <input type="submit" id="submitButton" class="btn btn-primary" value="Submit Hit!">
+          </div>
+          <div class="col-6 mt-2 alert alert-danger" id="cantSubmit" style="display: none;">
+            You're missing some questions! Please verify that you've filled out all the questions with the appropriate
+            lengths.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var e;
+  var condition;
+  var ipAddress = "";
+
+  $(document).ready(function () {
+
+    $(".debug").show();
+    if ($("#consent")[0].checked) {
+      $("#main-task").show();
+      $("#consent-message").hide();
+    }
+
+  });
+
+  var workerId = turkGetParam("workerId", "");
+
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.open("GET", "https://api.ipify.org", false); // false for synchronous request
+  xmlHttp.send();
+  if (xmlHttp.status == 200) {
+    ipAddress = xmlHttp.responseText;
+    if (ipAddress) {
+      var url = 'https://wall-e.media.mit.edu:5192/getIp/';
+      var request = new XMLHttpRequest();
+      request.open('POST', url, false);
+      request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      request.send("ipaddress=" + ipAddress + "&dbsource=mturk1" + "&workerId=" + workerId);
+
+      if (request.status == 200) {
+        var donehit = JSON.parse(request.responseText)["donehit"];
+        if (donehit) {
+
+          document.getElementById("didalready").innerHTML +=
+            "You have already completed this task the maximum number of times. Please return."
+          $("#all-content").hide();
+          $("#instructions").hide();
+        } else {
+          console.log("done hit <= 10")
+          $("#all-content").show();
+          $("#instructions").show();
+        }
+      }
+
+
+    }
+  } else {
+    var url = 'https://wall-e.media.mit.edu:5192/getIp/';
+    var request = new XMLHttpRequest();
+    request.open('POST', url, false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send("workerId=" + workerId + "&dbsource=mturk1");
+
+    if (request.status == 200) {
+      var donehit = JSON.parse(request.responseText)["donehit"];
+      if (donehit) {
+        document.getElementById("didalready").innerHTML +=
+          "You have already completed this task the maximum number of times. Please return."
+        $("#all-content").hide();
+        $("#instructions").hide();
+      } else {
+        console.log("done hit <= ")
+        $("#all-content").show();
+        $("#instructions").show();
+      }
+
+    }
+
+  }
+
+
+
+
+  /**
+   * Gets a URL parameter from the query string
+   */
+  function turkGetParam(name, defaultValue) {
+    var regexS = "[\?&]" + name + "=([^&#]*)";
+    var regex = new RegExp(regexS);
+    var tmpURL = window.location.href;
+    var results = regex.exec(tmpURL);
+    if (results == null) {
+      return defaultValue;
+    } else {
+      return results[1];
+    }
+  }
+
+
+
+
+  window.onload = () => {
+    const a = document.getElementById('moral');
+    a.onpaste = e => e.preventDefault();
+
+    const b = document.getElementById('emotion1');
+    b.onpaste = e => e.preventDefault();
+
+    const c = document.getElementById('mainevent');
+    c.onpaste = e => e.preventDefault();
+
+    const d = document.getElementById('empathy-1-yes');
+    d.onpaste = e => e.preventDefault();
+
+    const e = document.getElementById('empathy-2-yes');
+    e.onpaste = e => e.preventDefault();
+
+    const f = document.getElementById('empathy-3-yes');
+    f.onpaste = e => e.preventDefault();
+
+    const g = document.getElementById('empathy-4-yes');
+    g.onpaste = e => e.preventDefault();
+
+    const h = document.getElementById('empathy-5-yes');
+    h.onpaste = e => e.preventDefault();
+  }
+
+  function toggleConsent(checked) {
+    if (checked) {
+      $("#main-task").show();
+      $("#consent-message").hide();
+    } else {
+      $("#main-task").hide();
+      $("#consent-message").show();
+    }
+  }
+
+  function countSentences(text) {
+    var match = text.match(/[\w\)"][.?!](?:\s|$)/gm);
+    return match === null ? 0 : match.length;
+  }
+
+  function updateCounter(el, minS, maxS, minC, maxC) {
+    var name = el.id;
+    var counter = $("#" + name + "-sentence-counter");
+    var text = $(el).prop("value");
+    var nSents = countSentences(text);
+    var nChars = text.length;
+    var warnText = "";
+    counter.css('color', 'black');
+
+    if (nSents >= minS && nChars < maxC && nChars > minC)
+      warnText = " ✓";
+
+    if (nSents > maxS || nChars > maxC) {
+      warnText = " (try shortening it)";
+      counter.css('color', '#721c24');
+    }
+    counter.html(nSents + " sentences (" + nChars + " characters) detected" + warnText);
+  }
+
+  function checkSummary() {
+    var summary = $("#mainevent").prop("value");
+    var nSents = countSentences(summary);
+    if (summary.length > 50 && summary.length < 1000 && nSents >= 1) {
+      $("#mainevent").attr("data-state", "open");
+      $("#mainevent-length-warning").hide();
+      return true;
+    } else {
+      $("#mainevent").attr("data-state", "invalid");
+      $("#mainevent-length-warning").show();
+      return false;
+    }
+  }
+
+  function checkEmotion1() {
+    var summary = $("#emotion1").prop("value");
+    var nSents = countSentences(summary);
+    if (summary.length > 150 && summary.length < 1000 && nSents >= 2) {
+      $("#emotion1").attr("data-state", "open");
+      $("#emotion1-length-warning").hide();
+      return true;
+    } else {
+      $("#emotion1").attr("data-state", "invalid");
+      $("#emotion1-length-warning").show();
+      return false;
+    }
+  }
+
+  function checkMoral() {
+    var summary = $("#moral").prop("value");
+    var nSents = countSentences(summary);
+    if (summary.length > 100 && summary.length < 1000 && nSents >= 1) {
+      $("#moral").attr("data-state", "open");
+      $("#moral-length-warning").hide();
+      return true;
+    } else {
+      $("#moral").attr("data-state", "invalid");
+      $("#moral-length-warning").show();
+      return false;
+    }
+  }
+
+  function checkEmpathyResponses2() {
+    var empathy1 = $("#empathy-1-yes").prop("value");
+    var empathy2 = $("#empathy-2-yes").prop("value");
+    var empathy3 = $("#empathy-3-yes").prop("value");
+    var empathy4 = $("#empathy-4-yes").prop("value");
+    var empathy5 = $("#empathy-5-yes").prop("value");
+    var nSents1 = countSentences(empathy1);
+    var nSents2 = countSentences(empathy2);
+    var nSents3 = countSentences(empathy3);
+    var nSents4 = countSentences(empathy4);
+    var nSents5 = countSentences(empathy5);
+    var empathy1valid = empathy1.length > 40 && empathy1.length < 1000 && nSents1 >= 1;
+    var empathy2valid = empathy2.length > 40 && empathy2.length < 1000 && nSents2 >= 1;
+    var empathy3valid = (empathy3.length > 50 && empathy3.length < 1000 && nSents3 >= 1) || empathy3.length == 0;
+    var empathy4valid = (empathy4.length > 50 && empathy4.length < 1000 && nSents4 >= 1) || empathy4.length == 0;
+    var empathy5valid = (empathy5.length > 50 && empathy5.length < 1000 && nSents5 >= 1) || empathy5.length == 0;
+
+    if (empathy1valid && empathy2valid && empathy3valid && empathy4valid && empathy5valid) {
+      $("#empathy-1-yes").attr("data-state", "open");
+      $("#empathy-2-yes").attr("data-state", "open");
+      $("#empathy-3-yes").attr("data-state", "open");
+      $("#empathy-4-yes").attr("data-state", "open");
+      $("#empathy-5-yes").attr("data-state", "open");
+      $("#empathy-length-warning").hide();
+      console.log("EVERYTHING VALID")
+      return true;
+    } else {
+      if (!empathy1valid) {
+        $("#empathy-1-yes").attr("data-state", "invalid");
+        console.log("1")
+      } else {
+        $("#empathy-1-yes").attr("data-state", "open");
+
+      }
+      if (!empathy2valid) {
+        $("#empathy-2-yes").attr("data-state", "invalid");
+      } else {
+        $("#empathy-2-yes").attr("data-state", "open");
+
+      }
+      if (!empathy3valid) {
+        $("#empathy-3-yes").attr("data-state", "invalid");
+      } else {
+        $("#empathy-3-yes").attr("data-state", "open");
+
+      }
+      if (!empathy4valid) {
+        $("#empathy-4-yes").attr("data-state", "invalid");
+      } else {
+        $("#empathy-4-yes").attr("data-state", "open");
+
+      }
+      if (!empathy5valid) {
+        $("#empathy-5-yes").attr("data-state", "invalid");
+      } else {
+        $("#empathy-5-yes").attr("data-state", "open");
+
+      }
+      $("#empathy-length-warning").show();
+      return false;
+    }
+  }
+
+  $("#submitButton").on("click", function (e) {
+
+    var ok = checkSummary();
+    console.log("main event ok? " + ok);
+
+    ok = checkEmotion1() && ok;
+    console.log("main emotion ok? " + ok);
+
+    ok = checkMoral() && ok;
+    console.log("moral ok? " + ok);
+
+    ok = checkEmpathyResponses2() && ok;
+    console.log("empathy ok? " + ok);
+
+    ok = ($(":invalid").length == 0) && ok;
+    console.log("All fields valid? " + ok);
+    $(":valid").removeClass("invalid");
+    $(".lickert>input:valid").parents().removeClass("invalid");
+    $(".form-check>input:valid").parents().removeClass("invalid");
+    if (!ok) {
+      $("#cantSubmit").show();
+      $(":invalid").addClass("invalid");
+      $(".lickert>input:invalid").parents().addClass("invalid");
+      $(".form-check>input:invalid").parents().addClass("invalid");
+      e.preventDefault();
+    } else {
+      var url = 'https://wall-e.media.mit.edu:5192/uploadIp/';
+      var request = new XMLHttpRequest();
+      request.open('POST', url, false);
+      request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      request.send("ipaddress=" + ipAddress + "&dbsource=mturk1" + "&workerId=" + workerId);
+      if (request.status == 200) {
+        var success = JSON.parse(request.responseText)["success"];
+        console.log("SUCCESS", success)
+        if (success) {
+          $("#cantSubmit").hide();
+        } else {
+          $("#cantSubmit").show();
+          $(":invalid").addClass("invalid");
+          $(".lickert>input:invalid").parents().addClass("invalid");
+          $(".form-check>input:invalid").parents().addClass("invalid");
+          e.preventDefault();
+        }
+      } else {
+        $("#cantSubmit").show();
+        $(":invalid").addClass("invalid");
+        $(".lickert>input:invalid").parents().addClass("invalid");
+        $(".form-check>input:invalid").parents().addClass("invalid");
+        e.preventDefault();
+      }
+    }
+  });
+</script>
+
+<style type="text/css">
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 400;
+  }
+
+  #high-cog-instructions {
+    border-radius: .5em;
+    border: .75px solid black;
+    padding: .5em;
+    background-color: white;
+  }
+
+  .section {
+    border-top: solid darkgrey .75px;
+    padding-top: 15px;
+  }
+
+  .lickert>label {
+    font-size: smaller;
+  }
+
+  textarea[data-state="open"] {
+    background-color: white;
+    border-color: #ced4da;
+    color: #495057;
+  }
+
+  textarea[data-state="invalid"],
+  textarea[data-state="invalid"]:active,
+  textarea[data-state="invalid"]:focus,
+  textarea[data-state="invalid"]:focus-within {
+    background-color: #f5c6cb;
+    border-color: #D22437;
+    color: #721c24;
+  }
+
+  input.form-check-input {
+    padding-right: 10px;
+  }
+
+  ul>li:before {
+    margin-left: -1em;
+    margin-right: .25em;
+  }
+
+  .corr {
+    font-weight: bold;
+  }
+
+  ul>li.corr:before {
+    content: "\2713";
+  }
+
+  ul>li.inco:before {
+    content: "\2717";
+  }
+
+  .form-check.invalid,
+  .lickert.invalid,
+  input.invalid,
+  select.invalid {
+    border: .1em solid #D22437;
+    border-radius: .1em;
+    background-color: #f5c6cb;
+    padding: .1em;
+  }
+</style>
