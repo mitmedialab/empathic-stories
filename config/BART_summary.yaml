@@ -22,7 +22,7 @@ train:
   optimizer: 'adam'
   seed: 1234
   adam:
-    lr: 0.00001
+    lr: 1e-5
   epochs: 100
 #############################
 val:

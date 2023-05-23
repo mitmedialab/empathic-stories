@@ -1,6 +1,5 @@
 task: 'similarity'
 model: 'SBERT'
-loss: 'regression'
 pooling: "MEAN"
 use_scheduler: True
 bin: False
