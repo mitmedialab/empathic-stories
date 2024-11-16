@@ -1,5 +1,11 @@
 # empathic-stories
 
+## Latest model checkpoint available here:
+[Model checkpoint available for download through Google Drive](https://drive.google.com/file/d/1y6SRfWGFeW9f8AnkIWiKdRYelIRbNW1I/view?usp=drive_link) 
+
+[Sample server code for accessing model](https://drive.google.com/file/d/1ifdX5ds2wblhBZH2IU89F6szrfLvz-WB/view?usp=drive_link) 
+ 
+
 ## File Structure
 * `/annotation` contains all MTurk annotation templates
 * `/data` contains all data folders for train, dev, test sets
