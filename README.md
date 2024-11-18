@@ -3,7 +3,31 @@
 ## Latest model checkpoint available here:
 [Model checkpoint available for download through Google Drive](https://drive.google.com/file/d/1y6SRfWGFeW9f8AnkIWiKdRYelIRbNW1I/view?usp=drive_link) 
 
-[Sample server code for accessing model](https://drive.google.com/file/d/1ifdX5ds2wblhBZH2IU89F6szrfLvz-WB/view?usp=drive_link) 
+[Sample code setting up server to remote access model](https://drive.google.com/file/d/1ifdX5ds2wblhBZH2IU89F6szrfLvz-WB/view?usp=drive_link) 
+
+
+Sample how to use:
+```
+from trainer import EmpathicSimilarityModel
+from numpy import dot
+from numpy.linalg import norm
+import numpy as np
+
+model_BART =EmpathicSimilarityModel.load_from_checkpoint("./lightning_logs/version_164/checkpoints/epoch=15-step=752.ckpt", model="BART", pooling="MEAN", bin=False, losses="MSE", use_pretrained=False)
+
+# get embeddings
+story1 = "this is my story"
+e1 = model_BART(story1).detach().numpy().reshape(-1)
+
+story2 = "this is my story 2"
+e2 = model_BART(story2).detach().numpy().reshape(-1)
+
+def get_cosine_similarity(a, b):
+    cos_sim = dot(a, b)/(norm(a)*norm(b))
+    return cos_sim
+
+print(get_cosine_similarity(e1, e2))
+```
  
 
 ## File Structure
